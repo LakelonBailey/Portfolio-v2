@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Portfolio-v2/static/css/main.afd7172b.chunk.css",
+    "main.js": "/Portfolio-v2/static/js/main.cbe28447.chunk.js",
+    "main.js.map": "/Portfolio-v2/static/js/main.cbe28447.chunk.js.map",
+    "runtime-main.js": "/Portfolio-v2/static/js/runtime-main.f3b5d43a.js",
+    "runtime-main.js.map": "/Portfolio-v2/static/js/runtime-main.f3b5d43a.js.map",
+    "static/js/2.87e629b4.chunk.js": "/Portfolio-v2/static/js/2.87e629b4.chunk.js",
+    "static/js/2.87e629b4.chunk.js.map": "/Portfolio-v2/static/js/2.87e629b4.chunk.js.map",
+    "static/js/3.963c00a9.chunk.js": "/Portfolio-v2/static/js/3.963c00a9.chunk.js",
+    "static/js/3.963c00a9.chunk.js.map": "/Portfolio-v2/static/js/3.963c00a9.chunk.js.map",
+    "index.html": "/Portfolio-v2/index.html",
+    "static/css/main.afd7172b.chunk.css.map": "/Portfolio-v2/static/css/main.afd7172b.chunk.css.map",
+    "static/js/2.87e629b4.chunk.js.LICENSE.txt": "/Portfolio-v2/static/js/2.87e629b4.chunk.js.LICENSE.txt",
+    "static/media/quizard.65f1d16e.png": "/Portfolio-v2/static/media/quizard.65f1d16e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f3b5d43a.js",
+    "static/js/2.87e629b4.chunk.js",
+    "static/css/main.afd7172b.chunk.css",
+    "static/js/main.cbe28447.chunk.js"
+  ]
+}
