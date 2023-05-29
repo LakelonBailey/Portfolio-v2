@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --theme-dark-blue: #242834;
+  --theme-blue: #095B93;
+  --theme-light-blue: #489AC2;
+  --theme-sandy: #C4B0A9;
+  --theme-yellow: #ffeec7;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--theme-light-blue);
+}
+
+
+
+@keyframes folding {
+  0% {
+    transform: perspective(600px) rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(600px) rotateX(180deg);
+    opacity: 0;
+  }
+}
+
+.folding-square {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  animation: folding 2s linear forwards;
+  transform-origin: top;
+}
+
+.dark-blue {
+  color: var(--theme-dark-blue);
+}
+.blue {
+  color: var(--theme-blue);
+}
+.light-blue {
+  color: var(--theme-light-blue);
+}
+.sandy {
+  color: var(--theme-sandy);
+}
+
+.yellow {
+  color: var(--theme-yellow);
+}
+
+.background-yellow {
+  color: var(--theme-yellow);
+}
+
+:root {
+  --navbar-height: 56px;
+}
+
+.layout {
+  position: relative;
+  padding-top: var(--navbar-height); /* Adjust this if your Navbar height changes */
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 999;
+  height: var(--navbar-height);
+}
+
+.navbar-logo.center {
+  margin: 0 auto;
+}
+
+.menu-icon {
+  margin-right: auto;
+}
+
+.sidebar-label {
+  position: relative; /* Required for 'left' to work */
+  transition: opacity 2s ease-out;
+  opacity: 0;
+  margin-left: 8px;
+}
+
+.sidebar-link {
+  width: 100%;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.main-row {
+  margin-top: var(--navbar-height);
+}
+
+.main-content {
+  position: relative;
+  left: 50px;
+  width: fit-content;
+  height: fit-content;
+  padding-left: 12px;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+/* Define the slide-in animation */
+@keyframes slideInSmall {
+0% {
+  left: -10px;
+  opacity: 0;
+}
+100% {
+  left: 0;
+  opacity: 1;
+}
+}
+/* Define the slide-in animation */
+@keyframes slideIn {
+  0% {
+    left: -50px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* Define the slide-out animation */
+@keyframes slideOutSmall {
+0% {
+  left: 0;
+  opacity: 1;
+}
+100% {
+  left: -10px;
+  opacity: 0;
+}
+}
+/* Define the slide-out animation */
+@keyframes slideOut {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: -50px;
+    opacity: 0;
+  }
+}
+
+/* Apply the slide-in animation when the 'active' class is added */
+.sidebar-label.active {
+animation: slideInSmall .25s ease-out forwards;
+}
+
+/* Apply the slide-out animation when the 'active' class is removed */
+.sidebar-label:not(.active) {
+animation: slideOutSmall .25s ease-out forwards;
+}
+.sidebar.is-mobile.active {
+animation: slideIn .25s ease-out forwards;
+}
+.sidebar.is-mobile:not(.active) {
+  animation: slideOut .25s ease-out forwards;
+}
+
