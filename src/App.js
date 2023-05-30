@@ -5,11 +5,7 @@ import './App.css';
 
 const AppRouter = () => {
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Main />} />
-            </Routes>
-        </Router>
+       <Main />
     );
 }
 
