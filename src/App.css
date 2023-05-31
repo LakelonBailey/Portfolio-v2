@@ -126,7 +126,7 @@ body {
 /* Define the slide-in animation */
 @keyframes slideIn {
   0% {
-    left: -50px;
+    left: -50%;
     opacity: 0;
   }
   100% {

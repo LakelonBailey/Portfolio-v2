@@ -29,6 +29,7 @@ const MainContent = styled.div`
     position: absolute;
     transition: left .2s ease-out;
     left: ${({isMobile}) => isMobile ? '0' : `${SIDEBAR_WIDTH}`};
+    animation: slideIn .5s ease-out forwards;
 `
 
 const SideBarHeader = styled.h1`

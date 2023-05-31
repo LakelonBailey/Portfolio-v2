@@ -1,12 +1,18 @@
-import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import React, {useState} from 'react';
 import Main from './components/Main';
 import './App.css';
 
-const AppRouter = () => {
+const App = () => {
+
+    const pages = {
+        'main': <Main />
+    };
+
+    const [page, setPage] = useState('main');
+
     return (
-       <Main />
+        pages[page]
     );
 }
 
-export default AppRouter;
+export default App;
