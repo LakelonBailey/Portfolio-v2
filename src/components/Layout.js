@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IconContext } from 'react-icons';
-import { FaHome, FaUser, FaCog, FaBars } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import {capitalize} from '../utils';
 import styled, {keyframes} from 'styled-components';
 
@@ -68,12 +68,9 @@ const SideBarHeader = styled.h1`
     top: 0;
     margin: 0;
     padding-top: 12px;
-    transition: text-align 1s ease-out;
-
-    ${({expanded}) => expanded ? `
-            text-align: left;
-        ` : ''
-    }}
+    padding-bottom: 24px;
+    transition: all .3s ease-out;
+    border-bottom: 2px solid ${({expanded}) => expanded ? 'var(--theme-light-blue)' : 'transparent'}};
 
     ${({isMobile}) => isMobile && `
         padding-top: 62px;
@@ -100,7 +97,7 @@ const SideBarLinks = styled.div`
 const SideBarLink = styled.a`
     transition: all .3s ease;
     font-size: 24px;
-    width: 100%;
+    width: calc(100% - 35px);
     border: none;
     white-space: nowrap;
     overflow: hidden;
@@ -117,14 +114,11 @@ const SideBarLink = styled.a`
 
 const SideBarLabel = styled.span`
     position: relative;
-    opacity: 0;
     margin-left: 8px;
+    transition: opacity .3s ease;
+    opacity: 0;
     &.active {
-        animation: ${animations['labelSlideIn']} .3s ease forwards;
-    }
-
-    &:not(.active) {
-        animation: ${animations['labelSlideOut']} .3s ease forwards;
+        opacity: 1;
     }
 `
 
@@ -220,23 +214,11 @@ const Layout = ({ children, pages, setPage, currentPage}) => {
     return isExpanded ? 'expanded' : '';
   }
 
-  const handleMouseEnter = () => {
+  const handleMouseAction = isEntering => {
     if (isMobile) {
         return;
     }
-    setIsExpanded(true);
-  }
-
-  const handleMouseLeave = () => {
-    if (isMobile) {
-        return;
-    }
-
-    setIsExpanded(false);
-  }
-
-  const toggleExpanded = () => {
-    setIsExpanded(!isExpanded);
+    setIsExpanded(isEntering);
   }
 
   const changePage = (pageKey) => {
@@ -250,8 +232,8 @@ const Layout = ({ children, pages, setPage, currentPage}) => {
     <>
     <SideBar
     className={getSidebarState()}
-    onMouseEnter={handleMouseEnter}
-    onMouseLeave={handleMouseLeave}
+    onMouseEnter={() => handleMouseAction(true)}
+    onMouseLeave={() => handleMouseAction(false)}
     isMobile={isMobile}
     isExpanded={isExpanded}
     >
@@ -283,7 +265,7 @@ const Layout = ({ children, pages, setPage, currentPage}) => {
         <NavBar>
             <IconContext.Provider value={{}}>
                 <NavBarIcon>
-                    <FaBars  onClick={toggleExpanded}/>
+                    <FaBars  onClick={() => setIsExpanded(!isExpanded)}/>
                 </NavBarIcon>
             </IconContext.Provider>
             <NavBarName>Lakelon Bailey</NavBarName>
