@@ -70,12 +70,19 @@ const SideBarHeader = styled.h1`
     padding-top: 12px;
     padding-bottom: 24px;
     transition: all .3s ease-out;
-    border-bottom: 2px solid ${({expanded}) => expanded ? 'var(--theme-light-blue)' : 'transparent'}};
 
     ${({isMobile}) => isMobile && `
         padding-top: 62px;
     `}
 `;
+
+const SideBarDivider = styled.div`
+    height: 0px;
+    transition: all .3s ease-out;
+    margin: 0 auto;
+    border-bottom: 2px solid ${({expanded}) => expanded ? 'var(--theme-light-blue)' : 'transparent'}};
+    width: ${({expanded}) => expanded ? SIDEBAR_EXPANDED_WIDTH : '0'}};
+`
 
 const NavBarName = styled.h1`
     font-size: 25px;
@@ -238,10 +245,13 @@ const Layout = ({ children, pages, setPage, currentPage}) => {
     isExpanded={isExpanded}
     >
     {!isMobile && (
+        <>
         <SideBarHeader expanded={isExpanded} isMobile={isMobile}>
             <NamePart expanded={isExpanded}>L<span>akelon</span></NamePart>
             <NamePart expanded={isExpanded}>B<span>ailey</span></NamePart>
         </SideBarHeader>
+        <SideBarDivider expanded={isExpanded} />
+        </>
     )}
         <SideBarLinks>
         <IconContext.Provider value={{}}>
