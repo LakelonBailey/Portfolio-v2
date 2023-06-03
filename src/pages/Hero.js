@@ -1,5 +1,6 @@
 import React from "react";
 import profilePic from '../assets/images/ProfilePic.png';
+import PageBox from "../components/PageBox";
 import styled from "styled-components";
 
 
@@ -17,16 +18,6 @@ const ProfilePic = styled.div`
         7.5px 0 0 rgba(196, 176, 169, .75),
         15px 0 0 rgba(196, 176, 169, .5),
         22.5px 0 0 rgba(196, 176, 169, .25);
-`;
-
-const HeroBox = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--theme-yellow);
 `;
 
 const HeroText = styled.div`
@@ -56,8 +47,7 @@ const Hero = () => {
 
     const diameter = '30vw';
     return (
-        <div>
-            <HeroBox>
+            <PageBox>
                 <ProfilePic diameter={diameter} />
                 <HeroText>
                     <h1>
@@ -67,8 +57,7 @@ const Hero = () => {
                         A <BlueSpan style={{fontWeight: 'bold'}}>passionate</BlueSpan> and <BlueSpan style={{fontWeight: 'bold'}}>versatile</BlueSpan> software developer with unique talent in communication and leadership.
                     </p>
                 </HeroText>
-            </HeroBox>
-        </div>
+            </PageBox>
     )
 }
 
