@@ -228,6 +228,12 @@ const Layout = ({ children, pages, setPage, currentPage}) => {
     setIsExpanded(isEntering);
   }
 
+  const handleShadowClick = () => {
+    if (isExpanded) {
+        setIsExpanded(false);
+    }
+  }
+
   const changePage = (pageKey) => {
     setPage(pageKey);
     if (isMobile) {
@@ -282,7 +288,7 @@ const Layout = ({ children, pages, setPage, currentPage}) => {
         </NavBar>
     )}
     <MainContent isMobile={isMobile}>
-        <MainContentShadow  sidebarExpanded={isExpanded}/>
+        <MainContentShadow  sidebarExpanded={isExpanded} onClick={handleShadowClick}/>
         {children}
     </MainContent>
     </>
