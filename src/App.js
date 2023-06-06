@@ -34,7 +34,7 @@ const App = () => {
             icon: <FaRocket />
         },
     };
-    const defaultPage = 'hero';
+    const defaultPage = 'about';
     const previousPage = useRef(null);
     const [currentPage, setPage] = useState(defaultPage);
 

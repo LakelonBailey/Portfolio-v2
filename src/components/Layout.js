@@ -95,7 +95,7 @@ const NavBarName = styled.h1`
 
 
 const SideBarLinks = styled.div`
-    margin-top: 5vh;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -149,22 +149,24 @@ const NamePart = styled.div`
 `;
 
 const MainContent = styled.div`
-    position: absolute;
+    position: fixed;
     transition: left ${MOBILE_TRANSITION_DURATION} ease-out,
                 width ${MOBILE_TRANSITION_DURATION} ease-out;
-    height: 100%;
+    height: calc(100% - ${({isMobile}) => isMobile ? NAVBAR_HEIGHT : '0px'});
     display: flex;
     justify-content: center;
     align-items: center;
     left: ${({isMobile, isExpanded}) => isMobile ? '0' : isExpanded ? SIDEBAR_EXPANDED_WIDTH : `${SIDEBAR_WIDTH}`};
     width: ${({isMobile, isExpanded}) => isMobile ? '100%' : isExpanded ? `calc(100% - ${SIDEBAR_EXPANDED_WIDTH})` : `calc(100% - ${SIDEBAR_WIDTH})`};
     overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 100;
     margin-top: ${({isMobile}) => isMobile ? NAVBAR_HEIGHT : '0'};
 `;
 
 const MainContentShadow = styled.div`
     position: fixed;
-    height: 100%;
+    height: 0;
     width: 100%;
     background-color: black;
     opacity: 0;
@@ -172,6 +174,7 @@ const MainContentShadow = styled.div`
     transition: opacity .2s ease-out;
 
     ${({sidebarExpanded}) => sidebarExpanded && `
+        height: 100%;
         opacity: .5;
         z-index: 900;
     `}
@@ -242,56 +245,56 @@ const Layout = ({ children, pages, setPage, currentPage}) => {
   }
 
   return (
-    <>
-    <SideBar
-    className={getSidebarState()}
-    onMouseEnter={() => handleMouseAction(true)}
-    onMouseLeave={() => handleMouseAction(false)}
-    isMobile={isMobile}
-    isExpanded={isExpanded}
-    >
-    {!isMobile && (
-        <>
-        <SideBarHeader expanded={isExpanded} isMobile={isMobile}>
-            <NamePart expanded={isExpanded}>L<span>akelon</span></NamePart>
-            <NamePart expanded={isExpanded}>B<span>ailey</span></NamePart>
-        </SideBarHeader>
-        <SideBarDivider expanded={isExpanded} />
-        </>
-    )}
-        <SideBarLinks>
-        <IconContext.Provider value={{}}>
-            {Object.entries(pages).map(([pageKey, pageInfo], i) => (
-                <SideBarLink
-                key={i}
-                href='#'
-                onClick={() => {changePage(pageKey)}}
-                isCurrent={pageKey === currentPage}
-                >
-                    {pageInfo.icon}
-                    <SideBarLabel className={isExpanded ? 'active' : ''}>
-                        {capitalize(pageInfo.name)}
-                    </SideBarLabel>
-                </SideBarLink>
-            ))}
-        </IconContext.Provider>
-        </SideBarLinks>
-    </SideBar>
-    {isMobile && (
-        <NavBar>
+    <div>
+        <SideBar
+        className={getSidebarState()}
+        onMouseEnter={() => handleMouseAction(true)}
+        onMouseLeave={() => handleMouseAction(false)}
+        isMobile={isMobile}
+        isExpanded={isExpanded}
+        >
+        {!isMobile && (
+            <div>
+                <SideBarHeader expanded={isExpanded} isMobile={isMobile}>
+                    <NamePart expanded={isExpanded}>L<span>akelon</span></NamePart>
+                    <NamePart expanded={isExpanded}>B<span>ailey</span></NamePart>
+                </SideBarHeader>
+                <SideBarDivider expanded={isExpanded} />
+            </div>
+        )}
+            <SideBarLinks>
             <IconContext.Provider value={{}}>
-                <NavBarIcon>
-                    <FaBars  onClick={() => setIsExpanded(!isExpanded)}/>
-                </NavBarIcon>
+                {Object.entries(pages).map(([pageKey, pageInfo], i) => (
+                    <SideBarLink
+                    key={i}
+                    href='#'
+                    onClick={() => {changePage(pageKey)}}
+                    isCurrent={pageKey === currentPage}
+                    >
+                        {pageInfo.icon}
+                        <SideBarLabel className={isExpanded ? 'active' : ''}>
+                            {capitalize(pageInfo.name)}
+                        </SideBarLabel>
+                    </SideBarLink>
+                ))}
             </IconContext.Provider>
-            <NavBarName>Lakelon Bailey</NavBarName>
-        </NavBar>
-    )}
-    <MainContent isMobile={isMobile}>
-        <MainContentShadow  sidebarExpanded={isExpanded} onClick={handleShadowClick}/>
-        {children}
-    </MainContent>
-    </>
+            </SideBarLinks>
+        </SideBar>
+        {isMobile && (
+            <NavBar>
+                <IconContext.Provider value={{}}>
+                    <NavBarIcon>
+                        <FaBars  onClick={() => setIsExpanded(!isExpanded)}/>
+                    </NavBarIcon>
+                </IconContext.Provider>
+                <NavBarName>Lakelon Bailey</NavBarName>
+            </NavBar>
+        )}
+        <MainContent isMobile={isMobile}>
+            <MainContentShadow  sidebarExpanded={isExpanded} onClick={handleShadowClick}/>
+            {children}
+        </MainContent>
+    </div>
   );
 };
 

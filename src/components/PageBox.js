@@ -3,15 +3,14 @@ import styled from "styled-components";
 
 
 const PageBoxEl = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 90vh;
-    width: 90vw;
+    height: fit-content;
+    width: 80vw;
     background-color: var(--theme-yellow);
     border-radius: 10px;
-`
+    padding: 24px;
+    margin-bottom: 50px;
+`;
+
 const PageBox = ({children}) => {
     return (
         <PageBoxEl>
