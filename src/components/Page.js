@@ -1,6 +1,7 @@
 
-import React, {useMemo} from "react";
+import React, {useMemo, useEffect, useContext, useState} from "react";
 import styled, {keyframes} from "styled-components";
+import { PageTransitionContext } from '../context/PageTransitionContext';
 
 
 const ELEVATED_PAGE_SCALE = '1.05';
@@ -119,6 +120,30 @@ const Page = ({pages, currentPage, previousPage}) => {
     const currentPageIndex = useMemo(() => pageKeys.indexOf(currentPage), [currentPage]);
     const previousPageIndex = useMemo(() => pageKeys.indexOf(previousPage), [previousPage]);
 
+    const { setIsPageTransitioning } = useContext(PageTransitionContext);
+
+
+    const [animationEnded, setAnimationEnded] = useState(
+        Object.keys(pages).reduce((obj, pageKey) => ({ ...obj, [pageKey]: false }), {})
+    );
+
+    const handleAnimationEnd = (pageKey) => {
+        setAnimationEnded(prevState => ({ ...prevState, [pageKey]: true }));
+    };
+
+
+    useEffect(() => {
+      setAnimationEnded(Object.keys(pages).reduce((obj, pageKey) => ({ ...obj, [pageKey]: false }), {}));
+      setIsPageTransitioning(true);
+    }, [currentPage]);
+
+    useEffect(() => {
+        if(animationEnded[currentPage]){
+          setIsPageTransitioning(false);
+        }
+    }, [animationEnded, currentPage]);
+
+
     const getPageClass = (pageKey, i) => {
         if (pageKey === currentPage) {
             if (!previousPage) {
@@ -145,8 +170,11 @@ const Page = ({pages, currentPage, previousPage}) => {
     return (
         <Pages>
             {Object.entries(pages).map(([pageKey, pageInfo], i) => (
-                <PageContainer key={i}>
-                    <InnerPageContainer className={getPageClass(pageKey, i)}>
+                <PageContainer
+                    key={i}
+                    style={{display: (pageKey === currentPage || (pageKey === previousPage && !animationEnded[pageKey])) ? "block" : "none"}}
+                >
+                    <InnerPageContainer onAnimationEnd={() => handleAnimationEnd(pageKey)} className={getPageClass(pageKey, i)}>
                         {pageInfo.element}
                     </InnerPageContainer>
                 </PageContainer>

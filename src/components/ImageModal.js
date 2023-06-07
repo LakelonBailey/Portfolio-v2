@@ -69,7 +69,7 @@ const DescriptionBox = styled.div`
 `;
 
 
-const ImageModal = ({isActive, setModalActive, image, children}) => {
+const ImageModal = ({isActive, setModalActive, image}) => {
     const handleClose = () => {
         setModalActive(false);
     };

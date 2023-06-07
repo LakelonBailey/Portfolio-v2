@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useContext } from "react"
 import styled from "styled-components";
+import { PageTransitionContext } from '../context/PageTransitionContext';
 
 const MasonryImageWrapper = styled.div`
   width: 100%;
@@ -48,6 +49,8 @@ const MasonryImageWrapper = styled.div`
 `;
 
 const MasonryImage = ({image, handleImageClick}) => {
+    const { isPageTransitioning } = useContext(PageTransitionContext);
+
     const imgRef = useRef(null);
     const divRef = useRef(null);
 
@@ -63,6 +66,12 @@ const MasonryImage = ({image, handleImageClick}) => {
       window.addEventListener('resize', handleImageLoadAndResize);
       return () => window.removeEventListener('resize', handleImageLoadAndResize);
     }, []);
+
+    useEffect(() => {
+        if (!isPageTransitioning) {
+          handleImageLoadAndResize();
+        }
+      }, [isPageTransitioning]);
 
     return (
       <MasonryImageWrapper>

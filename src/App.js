@@ -15,6 +15,9 @@ import Hero from './pages/Hero';
 import Projects from './pages/Projects';
 import About from './pages/About';
 
+// Context
+import { PageTransitionProvider } from './context/PageTransitionContext';
+
 const App = () => {
 
     const pages = {
@@ -43,18 +46,20 @@ const App = () => {
     }, [currentPage]);
 
     return (
-        <Layout
-        pages={pages}
-        setPage={setPage}
-        currentPage={currentPage}
-        >
-            <Page
-            currentPage={currentPage}
-            previousPage={previousPage.current}
+        <PageTransitionProvider>
+             <Layout
             pages={pages}
             setPage={setPage}
-            ></Page>
-        </Layout>
+            currentPage={currentPage}
+            >
+                <Page
+                currentPage={currentPage}
+                previousPage={previousPage.current}
+                pages={pages}
+                setPage={setPage}
+                ></Page>
+            </Layout>
+        </PageTransitionProvider>
     );
 }
 
