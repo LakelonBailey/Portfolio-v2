@@ -12,44 +12,76 @@ const SLIDE_OUT_TRANSLATION = '150%';
 const SLIDE_IN_TRANSLATION = '250%';
 
 const animations = {
+    // 'pageSlideInLeft': keyframes`
+    //     0% {
+    //         transform: translateX(-${SLIDE_IN_TRANSLATION}) scale(${ELEVATED_PAGE_SCALE});
+    //         box-shadow: ${ENTRANCE_BOX_SHADOW};
+    //     }
+    //     100% {
+    //         transform: translateX(0) scale(${ELEVATED_PAGE_SCALE});
+    //         box-shadow: ${ENTRANCE_BOX_SHADOW};
+    //     }
+    // `,
+    // 'pageSlideInRight': keyframes`
+    //     0% {
+    //         transform: translateX(+${SLIDE_IN_TRANSLATION}) scale(${ELEVATED_PAGE_SCALE});
+    //         box-shadow: ${ENTRANCE_BOX_SHADOW};
+    //     }
+    //     100% {
+    //         transform: translateX(0) scale(${ELEVATED_PAGE_SCALE});
+    //         box-shadow: ${ENTRANCE_BOX_SHADOW};
+    //     }
+    // `,
+    // 'pageSlideOutLeft': keyframes`
+    //     0% {
+    //         transform: translateX(0) scale(${ELEVATED_PAGE_SCALE});
+    //         box-shadow: ${ENTRANCE_BOX_SHADOW};
+    //     }
+    //     100% {
+    //         transform: translateX(-${SLIDE_OUT_TRANSLATION}) scale(${ELEVATED_PAGE_SCALE});
+    //         box-shadow: ${ENTRANCE_BOX_SHADOW};
+    //     }
+    // `,
+    // 'pageSlideOutRight': keyframes`
+    //     0% {
+    //         transform: translateX(0) scale(${ELEVATED_PAGE_SCALE});
+    //         box-shadow: ${ENTRANCE_BOX_SHADOW};
+    //     }
+    //     100% {
+    //         transform: translateX(+${SLIDE_OUT_TRANSLATION}) scale(${ELEVATED_PAGE_SCALE});
+    //         box-shadow: ${ENTRANCE_BOX_SHADOW};
+    //     }
+    // `,
     'pageSlideInLeft': keyframes`
         0% {
-            transform: translateX(-${SLIDE_IN_TRANSLATION}) scale(${ELEVATED_PAGE_SCALE});
-            box-shadow: ${ENTRANCE_BOX_SHADOW};
+            transform: translateX(-${SLIDE_IN_TRANSLATION});
         }
         100% {
-            transform: translateX(0) scale(${ELEVATED_PAGE_SCALE});
-            box-shadow: ${ENTRANCE_BOX_SHADOW};
+            transform: translateX(0);
         }
     `,
     'pageSlideInRight': keyframes`
         0% {
-            transform: translateX(+${SLIDE_IN_TRANSLATION}) scale(${ELEVATED_PAGE_SCALE});
-            box-shadow: ${ENTRANCE_BOX_SHADOW};
+            transform: translateX(+${SLIDE_IN_TRANSLATION});
         }
         100% {
-            transform: translateX(0) scale(${ELEVATED_PAGE_SCALE});
-            box-shadow: ${ENTRANCE_BOX_SHADOW};
+            transform: translateX(0);
         }
     `,
     'pageSlideOutLeft': keyframes`
         0% {
-            transform: translateX(0) scale(${ELEVATED_PAGE_SCALE});
-            box-shadow: ${ENTRANCE_BOX_SHADOW};
+            transform: translateX(0);
         }
         100% {
-            transform: translateX(-${SLIDE_OUT_TRANSLATION}) scale(${ELEVATED_PAGE_SCALE});
-            box-shadow: ${ENTRANCE_BOX_SHADOW};
+            transform: translateX(-${SLIDE_OUT_TRANSLATION});
         }
     `,
     'pageSlideOutRight': keyframes`
         0% {
-            transform: translateX(0) scale(${ELEVATED_PAGE_SCALE});
-            box-shadow: ${ENTRANCE_BOX_SHADOW};
+            transform: translateX(0);
         }
         100% {
-            transform: translateX(+${SLIDE_OUT_TRANSLATION}) scale(${ELEVATED_PAGE_SCALE});
-            box-shadow: ${ENTRANCE_BOX_SHADOW};
+            transform: translateX(+${SLIDE_OUT_TRANSLATION});
         }
     `,
     'dropIn': keyframes`
@@ -78,6 +110,36 @@ const Pages = styled.div`
     border: 1px solid red;
 `
 
+// const InnerPageContainer = styled.div`
+//     width: 100%;
+
+//     &.inactive {
+//         display: none;
+//     }
+
+//     &.active {
+//         display: block;
+//     }
+
+//     &.enter-left {
+//         animation:  ${animations['pageSlideInLeft']} ${SLIDE_DURATION} ease-in-out forwards,
+//                 ${animations['dropIn']} ${RAISE_DROP_DURATION} ${SLIDE_DURATION} ease-in-out forwards;
+//     }
+//     &.enter-right {
+//         animation:  ${animations['pageSlideInRight']} ${SLIDE_DURATION} ease-in-out forwards,
+//                 ${animations['dropIn']} ${RAISE_DROP_DURATION} ${SLIDE_DURATION} ease-in-out forwards;
+//     }
+
+//     &.exit-left {
+//         animation:  ${animations['pageSlideOutLeft']} ${SLIDE_DURATION} ${RAISE_DROP_DURATION} ease-in-out forwards,
+//                 ${animations['dropOut']} ${RAISE_DROP_DURATION} ease-in-out forwards;
+//     }
+//     &.exit-right {
+//         animation:  ${animations['pageSlideOutRight']} ${SLIDE_DURATION} ${RAISE_DROP_DURATION} ease-in-out forwards,
+//                 ${animations['dropOut']} ${RAISE_DROP_DURATION} ease-in-out forwards;
+//     }
+// `;
+
 const InnerPageContainer = styled.div`
     width: 100%;
 
@@ -90,21 +152,16 @@ const InnerPageContainer = styled.div`
     }
 
     &.enter-left {
-        animation:  ${animations['pageSlideInLeft']} ${SLIDE_DURATION} ease-in-out forwards,
-                ${animations['dropIn']} ${RAISE_DROP_DURATION} ${SLIDE_DURATION} ease-in-out forwards;
+        animation:  ${animations['pageSlideInLeft']} ${SLIDE_DURATION} ease-in-out forwards;
     }
     &.enter-right {
-        animation:  ${animations['pageSlideInRight']} ${SLIDE_DURATION} ease-in-out forwards,
-                ${animations['dropIn']} ${RAISE_DROP_DURATION} ${SLIDE_DURATION} ease-in-out forwards;
+        animation:  ${animations['pageSlideInRight']} ${SLIDE_DURATION} ease-in-out forwards;
     }
-
     &.exit-left {
-        animation:  ${animations['pageSlideOutLeft']} ${SLIDE_DURATION} ${RAISE_DROP_DURATION} ease-in-out forwards,
-                ${animations['dropOut']} ${RAISE_DROP_DURATION} ease-in-out forwards;
+        animation:  ${animations['pageSlideOutLeft']} ${SLIDE_DURATION} ease-in-out forwards;
     }
     &.exit-right {
-        animation:  ${animations['pageSlideOutRight']} ${SLIDE_DURATION} ${RAISE_DROP_DURATION} ease-in-out forwards,
-                ${animations['dropOut']} ${RAISE_DROP_DURATION} ease-in-out forwards;
+        animation:  ${animations['pageSlideOutRight']} ${SLIDE_DURATION} ease-in-out forwards;
     }
 `;
 

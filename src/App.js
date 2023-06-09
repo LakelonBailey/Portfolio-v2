@@ -7,13 +7,14 @@ import './App.css';
 // COMPONENTS
 import Layout from './components/Layout';
 import Page from './components/Page';
-import { FaHome, FaRocket, FaUser } from 'react-icons/fa';
+import { FaHome, FaRocket, FaUser, FaFile } from 'react-icons/fa';
 
 
 // PAGES
 import Hero from './pages/Hero';
 import Projects from './pages/Projects';
 import About from './pages/About';
+import Resume from './pages/Resume';
 
 // Context
 import { PageTransitionProvider } from './context/PageTransitionContext';
@@ -27,7 +28,7 @@ const App = () => {
             icon: <FaHome />
         },
         'about': {
-            name: 'About Me',
+            name: 'About',
             element: <About />,
             icon: <FaUser />
         },
@@ -35,6 +36,11 @@ const App = () => {
             name: 'Projects',
             element: <Projects />,
             icon: <FaRocket />
+        },
+        'resume': {
+            name: 'Resume',
+            element: <Resume />,
+            icon: <FaFile />
         },
     };
     const defaultPage = 'about';
