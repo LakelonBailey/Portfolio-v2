@@ -4,6 +4,8 @@ import { PageTransitionContext } from '../context/PageTransitionContext';
 
 const MasonryImageWrapper = styled.div`
   width: 100%;
+  max-width: 70vw;
+  margin: 0 auto;
   display: block;
   transition: transform .3s ease;
   position: relative;

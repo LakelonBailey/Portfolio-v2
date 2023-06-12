@@ -3,12 +3,11 @@ import styled from "styled-components";
 
 
 const PageBoxEl = styled.div`
+    min-height: 100vh;
     height: fit-content;
-    width: 85vw;
-    // background-color: var(--theme-yellow);
-    // border-radius: 10px;
-    padding: 24px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 `;
 
 const PageBox = ({children}) => {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IconContext } from 'react-icons';
 import { FaBars } from 'react-icons/fa';
-import {capitalize} from '../utils';
 import styled, {keyframes} from 'styled-components';
 
 
@@ -151,13 +150,14 @@ const NamePart = styled.div`
 const MainContent = styled.div`
     position: fixed;
     transition: left ${MOBILE_TRANSITION_DURATION} ease-out,
-                width ${MOBILE_TRANSITION_DURATION} ease-out;
+                width ${MOBILE_TRANSITION_DURATION} ease-out,
+                margin-top ${MOBILE_TRANSITION_DURATION} ease-out;
     height: calc(100% - ${({isMobile}) => isMobile ? NAVBAR_HEIGHT : '0px'});
     display: flex;
     justify-content: center;
     align-items: center;
     left: ${({isMobile, isExpanded}) => isMobile ? '0' : isExpanded ? SIDEBAR_EXPANDED_WIDTH : `${SIDEBAR_WIDTH}`};
-    width: ${({isMobile, isExpanded}) => isMobile ? '100%' : isExpanded ? `calc(100% - ${SIDEBAR_EXPANDED_WIDTH})` : `calc(100% - ${SIDEBAR_WIDTH})`};
+    width: ${({isMobile}) => isMobile ? '100%' : `calc(100% - ${SIDEBAR_WIDTH})`};
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 100;
@@ -273,7 +273,7 @@ const Layout = ({ children, pages, setPage, currentPage}) => {
                     >
                         {pageInfo.icon}
                         <SideBarLabel className={isExpanded ? 'active' : ''}>
-                            {capitalize(pageInfo.name)}
+                            {pageInfo.name}
                         </SideBarLabel>
                     </SideBarLink>
                 ))}
@@ -290,7 +290,7 @@ const Layout = ({ children, pages, setPage, currentPage}) => {
                 <NavBarName>Lakelon Bailey</NavBarName>
             </NavBar>
         )}
-        <MainContent isMobile={isMobile}>
+        <MainContent isMobile={isMobile} id='main-content'>
             <MainContentShadow  sidebarExpanded={isExpanded} onClick={handleShadowClick}/>
             {children}
         </MainContent>

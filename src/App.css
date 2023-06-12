@@ -4,7 +4,7 @@
   --theme-dark-blue: #242834;
   --theme-dark-blue-rgb: 36, 40, 52;
   --theme-blue: #095b93;
-  --theme-blue-rgb: 9, 91, 47;
+  --theme-blue-rgb: 9, 91, 147;
   --theme-light-blue: #489AC2;
   --theme-light-blue-rgb: 72, 154, 194;
   --theme-sandy: #C4B0A9;
@@ -15,5 +15,5 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--theme-yellow);
+  background-color: var(--theme-light-blue);
 }
