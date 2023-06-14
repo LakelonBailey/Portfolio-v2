@@ -9,7 +9,7 @@ const SectionEl = styled.div`
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
     padding: 0 12px;
     padding-bottom: 12px;
-    background-color: var(--theme-yellow);
+    background-color: var(--theme-3);
 
     ${({height}) => height && `
         height: ${height};
@@ -40,13 +40,13 @@ const Section = ({children, height, maxHeight}) => {
 }
 
 const SectionHeader = styled.h2`
-    color: var(--theme-yellow);
+    color: var(--theme-3);
     padding: 12px 24px 12px 30px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     position: relative;
     left: -25px;
-    background-color: var(--theme-light-blue);
+    background-color: var(--theme-2);
     width: fit-content;
 `;
 

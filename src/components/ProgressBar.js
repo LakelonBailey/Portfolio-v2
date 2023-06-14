@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const ProgressBarContainer = styled.div`
     width: 100%;
     height: 12px;
-    background-color: rgba(var(--theme-light-blue-rgb), .5);
+    background-color: rgba(var(--theme-2-rgb), .5);
     border-radius: 50px;
     position: relative;
     overflow: hidden;
@@ -13,7 +13,7 @@ const ProgressBarContainer = styled.div`
 const Filler = styled.div`
     height: 100%;
     width: ${({percentage}) => `${percentage}%`};
-    background-color: var(--theme-blue);
+    background-color: var(--theme-1);
     border-radius: inherit;
     transition: width 1s ease-in;
     transition-delay: 0.5s;

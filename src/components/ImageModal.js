@@ -78,7 +78,7 @@ const DescriptionBox = styled.div`
     max-height: 0;
     width: 100%;
     animation: ${descriptionDropDownAnimation} .3s ${MODAL_OPEN_DURATION} ease-in forwards;
-    background-color: var(--theme-yellow);
+    background-color: var(--theme-3);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 `;

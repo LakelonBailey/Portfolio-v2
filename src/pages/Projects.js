@@ -38,7 +38,7 @@ const ProjectDescriptionButton = styled.div`
     display: inline-block;
     padding: 10px 15px;
     color: white;
-    background-color: var(--theme-blue);
+    background-color: var(--theme-1);
     border-radius: 12px;
     text-decoration: none;
     font-size: 14px;
@@ -49,12 +49,12 @@ const ProjectDescriptionButton = styled.div`
     border: none;
 
     &:hover {
-      background-color: var(--theme-light-blue);
+      background-color: var(--theme-2);
       box-shadow: 0 2px 8px 0px rgba(0, 0, 0, .5);
     }
 
     &:active {
-      background-color: var(--theme-light-blue);
+      background-color: var(--theme-2);
     }
 
     &:focus {

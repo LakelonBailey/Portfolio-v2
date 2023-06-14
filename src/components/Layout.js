@@ -50,7 +50,7 @@ const SideBar = styled.aside`
     width: ${SIDEBAR_WIDTH};
     position: fixed;
     z-index: 999;
-    background-color: var(--theme-blue);
+    background-color: var(--theme-1);
     &.expanded {
         width: ${SIDEBAR_EXPANDED_WIDTH};
     }
@@ -79,7 +79,7 @@ const SideBarDivider = styled.div`
     height: 0px;
     transition: all .3s ease-out;
     margin: 0 auto;
-    border-bottom: 2px solid ${({expanded}) => expanded ? 'var(--theme-light-blue)' : 'transparent'}};
+    border-bottom: 2px solid ${({expanded}) => expanded ? 'var(--theme-2)' : 'transparent'}};
     width: ${({expanded}) => expanded ? SIDEBAR_EXPANDED_WIDTH : '0'}};
 `
 
@@ -108,7 +108,7 @@ const SideBarLink = styled.a`
     white-space: nowrap;
     overflow: hidden;
     text-decoration: none;
-    color: ${({isCurrent}) => isCurrent ? 'white' : 'var(--theme-light-blue)'};
+    color: ${({isCurrent}) => isCurrent ? 'white' : 'var(--theme-2)'};
     margin-left: 25px;
     margin-top: 25px;
 
@@ -184,7 +184,7 @@ const NavBar = styled.div`
     height: ${NAVBAR_HEIGHT};
     width: 100%;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-    background-color: var(--theme-blue);
+    background-color: var(--theme-1);
     display: flex;
     align-items: center;
     animation: ${animations['slideDown']} ${MOBILE_TRANSITION_DURATION} ease-out forwards;

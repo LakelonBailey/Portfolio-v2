@@ -1,19 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 :root {
-  --theme-dark-blue: #242834;
-  --theme-dark-blue-rgb: 36, 40, 52;
-  --theme-blue: #095b93;
-  --theme-blue-rgb: 9, 91, 147;
-  --theme-light-blue: #489AC2;
-  --theme-light-blue-rgb: 72, 154, 194;
-  --theme-sandy: #C4B0A9;
-  --theme-sandy-rgb: 196, 176, 169;
-  --theme-yellow: #ffeec7;
-  --theme-yellow-rgb: 255, 238, 199;
+
+  /* Blue, Light Blue, Yellow */
+  /*
+  --theme-1: #095b93;
+  --theme-2: #489AC2;
+  --theme-3: #ffeec7;
+  --theme-4: #C4B0A9;
+  */
+
+  /* Minty? */
+  --theme-1: #00b188;
+  --theme-2: #231f20;
+  --theme-3: #D9D9D9;
+  --theme-4: #345160;
+
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--theme-light-blue);
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Exo', sans-serif;
+  background-color: var(--theme-2);
 }

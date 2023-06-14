@@ -26,7 +26,7 @@ const SkillSectionHeader = styled.h2`
     margin-top: 12px;
     font-size: 24px;
     font-weight: normal;
-    border-bottom: 2px solid var(--theme-blue);
+    border-bottom: 2px solid var(--theme-1);
     padding-bottom: 4px;
     padding-left: 8px;
     & span:not(:last-child) {
@@ -56,7 +56,7 @@ const Position = styled.li`
         padding-top: 8px;
     }
     &:not(:last-child) {
-        border-bottom: 1px solid var(--theme-light-blue);
+        border-bottom: 1px solid var(--theme-2);
     }
 `;
 
@@ -130,7 +130,7 @@ const WorkExperienceContainer = styled.div`
 const WorkExperienceCard = styled.div`
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: rgba(var(--theme-light-blue-rgb), .3);
+    background-color: rgba(var(--theme-2-rgb), .3);
     transition: 0.3s;
     // border-radius: 5px;
     &:hover {
@@ -148,7 +148,7 @@ const SoftwareList = styled.li`
     font-weight: 600;
     width: 100%;
     padding-bottom: 6px;
-    border-bottom: 1px solid var(--theme-light-blue)
+    border-bottom: 1px solid var(--theme-2)
   }
 
   & p:last-child {
@@ -172,7 +172,7 @@ const EducationCard = styled.div`
     justify-content: space-between;
     width: fit-content;
     padding: 16px;
-    border: 1px solid var(--theme-light-blue);
+    border: 1px solid var(--theme-2);
     border-radius: 8px;
     margin: 0 24px;
     margin-bottom: 16px;
@@ -315,19 +315,19 @@ const Resume = () => {
                                 <SkillSectionHeader><span><FaBolt size={'20px'}/></span><span>Techniques</span></SkillSectionHeader>
                                 <SectionList>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Object-oriented Programming</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Object-oriented Programming</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Functional Programming</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Functional Programming</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Test-driven Development</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Test-driven Development</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Agile Development</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Agile Development</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Full-stack Development</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Full-stack Development</span>
                                     </TechniqueListItem>
                                 </SectionList>
                             </SubSection>
@@ -335,22 +335,22 @@ const Resume = () => {
                                 <SkillSectionHeader><span><FaLightbulb size={'20px'}/></span><span>Soft Skills</span></SkillSectionHeader>
                                 <SectionList>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Problem-solving</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Problem-solving</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Versitility/Adaptibility</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Versitility/Adaptibility</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Self-teaching/self-starting</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Self-teaching/self-starting</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Leadership and communication</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Leadership and communication</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Project management</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Project management</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-blue)" /></span><span>Teaching/Coaching</span>
+                                        <span><FaCheck color="var(--theme-1)" /></span><span>Teaching/Coaching</span>
                                     </TechniqueListItem>
                                 </SectionList>
                             </SubSection>

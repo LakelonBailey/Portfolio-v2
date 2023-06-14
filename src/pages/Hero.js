@@ -24,9 +24,9 @@ const ProfilePic = styled.div`
     background-position: top;
     margin: 0 50px;
     box-shadow:
-        7.5px 0 0 rgba(var(--theme-sandy-rgb), .75),
-        15px 0 0 rgba(var(--theme-sandy-rgb), .5),
-        22.5px 0 0 rgba(var(--theme-sandy-rgb), .25);
+        7.5px 0 0 rgba(var(--theme-4-rgb), .75),
+        15px 0 0 rgba(var(--theme-4-rgb), .5),
+        22.5px 0 0 rgba(var(--theme-4-rgb), .25);
 `;
 
 const HeroText = styled.div`
@@ -50,7 +50,7 @@ const HeroText = styled.div`
 `;
 
 const BlueSpan = styled.span`
-    color: var(--theme-blue);
+    color: var(--theme-1);
 `;
 
 const HeroContainer = styled.div`
@@ -96,11 +96,11 @@ const DownloadResumeButton = styled.a`
     display: flex;
     align-items: center;
     height: 28px;
-    background-color: var(--theme-blue);
+    background-color: var(--theme-1);
     width: fit-content;
     padding: 8px 12px;
     border-radius: 5px;
-    color: var(--theme-yellow);
+    color: var(--theme-3);
     margin-bottom: 3px;
 
     & span:first-child {

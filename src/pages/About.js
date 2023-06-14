@@ -57,13 +57,13 @@ const aboutImages = [
 ];
 
 const SectionHeader = styled.h2`
-    color: var(--theme-yellow);
+    color: var(--theme-3);
     padding: 12px 24px 12px 30px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     position: relative;
     left: -25px;
-    background-color: var(--theme-light-blue);
+    background-color: var(--theme-2);
     width: fit-content;
 `;
 
@@ -82,14 +82,14 @@ const Container = styled.div`
 const AboutSectionHeader = styled.h2`
   padding-left: 12px;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--theme-light-blue);
+  border-bottom: 1px solid var(--theme-2);
   font-weight: 500;
   text-align: left;
 `
 
 const InterestSubSection = styled.div`
   text-align: center;
-  background-color: rgba(var(--theme-blue-rgb), .5);
+  background-color: rgba(var(--theme-1-rgb), .5);
   margin: 12px;
   padding: 12px;
   border-radius: 5px;
@@ -107,7 +107,7 @@ const InterestSubSection = styled.div`
 
 const InterestHeader = styled.h3`
   margin: 0;
-  color: var(--theme-blue);
+  color: var(--theme-1);
 `
 
 const AboutSubSection = styled.div`
@@ -122,11 +122,11 @@ const AboutSubSection = styled.div`
 
 const InterestIcon = styled.div`
   font-size: 2em;
-  color: var(--theme-blue);
+  color: var(--theme-1);
 `;
 
 const BoldSpan = styled.span`
-    color: var(--theme-blue);
+    color: var(--theme-1);
     font-weight: bold;
 `
 

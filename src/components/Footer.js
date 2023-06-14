@@ -19,7 +19,7 @@ const FooterContainer = styled.div`
     p {
         margin: 0;
         padding: 0;
-        color: var(--theme-light-blue);
+        color: var(--theme-2);
         text-align: center;
     }
 `;
@@ -30,7 +30,7 @@ const FooterIcons = styled.div`
 `;
 
 const FooterDivider = styled.div`
-    border-bottom: 2px solid var(--theme-light-blue);
+    border-bottom: 2px solid var(--theme-2);
     width: 60%;
     margin: 8px auto;
 `;
