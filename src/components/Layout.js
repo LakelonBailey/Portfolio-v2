@@ -49,7 +49,7 @@ const SideBar = styled.aside`
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
     width: ${SIDEBAR_WIDTH};
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     background-color: var(--theme-1);
     &.expanded {
         width: ${SIDEBAR_EXPANDED_WIDTH};
@@ -191,7 +191,7 @@ const NavBar = styled.div`
     padding: 0 12px;
     color: white;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
 `;
 
 const NavBarIcon = styled.div`

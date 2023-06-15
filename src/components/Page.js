@@ -4,12 +4,10 @@ import styled, {keyframes} from "styled-components";
 import { PageTransitionContext } from '../context/PageTransitionContext';
 
 
-const ELEVATED_PAGE_SCALE = '1.05';
 const SLIDE_DURATION = '.8s';
-const RAISE_DROP_DURATION = '.2s';
-const ENTRANCE_BOX_SHADOW = '0 0 50px rgba(0, 0, 0, .75)';
-const SLIDE_OUT_TRANSLATION = '150%';
-const SLIDE_IN_TRANSLATION = '250%';
+const SLIDE_OUT_TRANSLATION = '100%';
+const SLIDE_IN_TRANSLATION = '100%';
+const SLIDE_PATTERN = 'ease-in-out';
 
 const animations = {
     'pageSlideInLeft': keyframes`
@@ -58,16 +56,16 @@ const InnerPageContainer = styled.div`
     }
 
     &.enter-left {
-        animation:  ${animations['pageSlideInLeft']} ${SLIDE_DURATION} ease-in-out forwards;
+        animation:  ${animations['pageSlideInLeft']} ${SLIDE_DURATION} ${SLIDE_PATTERN} forwards;
     }
     &.enter-right {
-        animation:  ${animations['pageSlideInRight']} ${SLIDE_DURATION} ease-in-out forwards;
+        animation:  ${animations['pageSlideInRight']} ${SLIDE_DURATION} ${SLIDE_PATTERN} forwards;
     }
     &.exit-left {
-        animation:  ${animations['pageSlideOutLeft']} ${SLIDE_DURATION} ease-in-out forwards;
+        animation:  ${animations['pageSlideOutLeft']} ${SLIDE_DURATION} ${SLIDE_PATTERN} forwards;
     }
     &.exit-right {
-        animation:  ${animations['pageSlideOutRight']} ${SLIDE_DURATION} ease-in-out forwards;
+        animation:  ${animations['pageSlideOutRight']} ${SLIDE_DURATION} ${SLIDE_PATTERN} forwards;
     }
 `;
 

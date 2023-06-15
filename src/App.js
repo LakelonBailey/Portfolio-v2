@@ -13,6 +13,7 @@ import Page from './components/Page';
 import { PageTransitionProvider } from './context/PageTransitionContext';
 import mainPages from './data/mainPages';
 import projectPages from './data/projectPages';
+import Landing from './components/Landing';
 
 
 function hexToRgb(hex) {
@@ -67,6 +68,7 @@ const App = () => {
 
     return (
         <PageTransitionProvider>
+            <Landing />
              <Layout
             pages={mainPages}
             setPage={setPage}

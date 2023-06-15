@@ -227,20 +227,20 @@ const Resume = () => {
                         width: '95%'
                     }}>
                         <Masonry columnsCount={2} gutter="12px">
-                            {workExperiences.map(workExperience => (
-                            <WorkExperienceCard>
+                            {workExperiences.map((workExperience, i) => (
+                            <WorkExperienceCard key={i}>
                                 <div>
                                     <WorkExperienceCompany>{workExperience.company}</WorkExperienceCompany>
                                     <PositionsList>
-                                        {workExperience.positions.map(position => (
-                                        <Position>
+                                        {workExperience.positions.map((position, j) => (
+                                        <Position key={j}>
                                             <PositionTitle>
                                                 <span>{position.title}</span>
                                                 <span>{position.duration}</span>
                                             </PositionTitle>
                                             <PositionDescription>
-                                                {position.notes.map(note => (
-                                                    <li>{note}</li>
+                                                {position.notes.map((note, k) => (
+                                                    <li key={k}>{note}</li>
                                                 ))}
                                             </PositionDescription>
                                         </Position>
