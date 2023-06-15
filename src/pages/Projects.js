@@ -8,7 +8,7 @@ import Section, {SectionHeader} from "../components/Section";
 import Footer from "../components/Footer";
 import { IconContext } from "react-icons";
 
-import ACTprepImage from '../assets/images/projects/ACTprep.jpg'
+import ACTprepImage from '../assets/images/projects/actprep/ACTprep.jpg'
 
 
 const ProjectDescriptionContainer = styled.div`

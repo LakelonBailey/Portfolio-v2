@@ -19,7 +19,6 @@ const FooterContainer = styled.div`
     p {
         margin: 0;
         padding: 0;
-        color: var(--theme-2);
         text-align: center;
     }
 `;

@@ -12,7 +12,7 @@ const imageAnimation = (left, top) => keyframes`
     100% {
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(1.10);
     }
 `;
 
@@ -58,7 +58,7 @@ const ImageModalContent = styled.div`
     flex-direction: column;
     animation: ${({imageLeft, imageTop}) => imageAnimation(imageLeft, imageTop)} ${MODAL_OPEN_DURATION} ease forwards;
     border-radius: 15px;
-    width: fit-content;
+    width: ${({imageWidth}) => imageWidth}px;
     height: fit-content;
     padding: 0;
     max-width: 70vw;
@@ -103,6 +103,7 @@ const ImageModal = ({isActive, setModalState, image, children}) => {
             onClick={handleContentClick}
             imageLeft={parseInt(image.info.left)}
             imageTop={parseInt(image.info.top)}
+            imageWidth={image.width}
             >
                 <ModalImage
                 src={image.src}

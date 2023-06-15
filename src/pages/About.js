@@ -4,7 +4,7 @@ import PhotoMasonry from "../components/PhotoMasonry";
 import MasonryImage from "../components/MasonryImage";
 import ImageModal from "../components/ImageModal";
 import styled from "styled-components";
-import Section from "../components/Section";
+import Section, {SectionHeader} from "../components/Section";
 import Footer from "../components/Footer";
 
 import {
@@ -55,17 +55,6 @@ const aboutImages = [
         description: (<p>Test Description</p>)
     },
 ];
-
-const SectionHeader = styled.h2`
-    color: var(--theme-3);
-    padding: 12px 24px 12px 30px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    position: relative;
-    left: -25px;
-    background-color: var(--theme-2);
-    width: fit-content;
-`;
 
 const Container = styled.div`
   display: flex;
@@ -231,9 +220,7 @@ const About = () => {
             </Section>
             <Section>
                 <SectionHeader>Photos</SectionHeader>
-                <PhotoMasonry
-                images={images}
-                />
+                <p style={{width:'100%', textAlign: 'center',fontSize: '50px'}}><strong>Coming soon!</strong></p>
             </Section>
             <Footer />
             <ImageModal

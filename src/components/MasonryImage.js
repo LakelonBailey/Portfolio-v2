@@ -11,7 +11,6 @@ const MasonryImageWrapper = styled.div`
   position: relative;
 
   &:hover {
-    transform: scale(1.05);
     z-index: 800;
 
     & div {
@@ -47,6 +46,8 @@ const MasonryImageWrapper = styled.div`
     height: 100%;
     width: 100%;
     border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    border: 1px solid lightgray;
   }
 `;
 
