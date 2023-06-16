@@ -1,6 +1,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 import styled, {keyframes, css} from "styled-components";
+import { FaTimes } from "react-icons/fa";
 
 const MODAL_OPEN_DURATION = '.5s';
 const imageAnimation = (left, top) => keyframes`
@@ -12,7 +13,7 @@ const imageAnimation = (left, top) => keyframes`
     100% {
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%) scale(1.10);
+        transform: translate(-50%, -50%);
     }
 `;
 
@@ -69,6 +70,7 @@ const ModalImage = styled.img`
     max-width: 100%;
     height: auto;
     border-radius: 15px;
+    border-bottom: 1px solid lightgray;
     animation: ${props => props.isActive ? css`${imageBorderAnimation} .3s ${MODAL_OPEN_DURATION} ease forwards` : 'none'};
 `;
 
@@ -78,10 +80,43 @@ const DescriptionBox = styled.div`
     max-height: 0;
     width: 100%;
     animation: ${descriptionDropDownAnimation} .3s ${MODAL_OPEN_DURATION} ease-in forwards;
-    background-color: var(--theme-3);
+    background-color: lightgray;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 `;
+
+const ViewImageLink = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & a {
+        text-decoration: none;
+        margin-top: 4px;
+        transition: all .3s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+`;
+
+const CloseIcon = styled.div`
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+        transform: scale(1.20);
+    }
+
+    & > * {
+        background-color: white;
+        padding: 4px;
+        border-radius: 50%;
+    }
+`
 
 
 const ImageModal = ({isActive, setModalState, image, children}) => {
@@ -105,12 +140,14 @@ const ImageModal = ({isActive, setModalState, image, children}) => {
             imageTop={parseInt(image.info.top)}
             imageWidth={image.width}
             >
+                <CloseIcon onClick={handleClose}><FaTimes size={'25px'}/></CloseIcon>
                 <ModalImage
                 src={image.src}
                 imageWidth={image.width}
                 isActive={isActive}
                 alt="" />
                 <DescriptionBox>
+                    <ViewImageLink><a href={image.src} target="_blank" rel="noreferrer">View Image</a></ViewImageLink>
                     {children}
                 </DescriptionBox>
             </ ImageModalContent>

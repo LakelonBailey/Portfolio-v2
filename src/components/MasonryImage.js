@@ -14,7 +14,8 @@ const MasonryImageWrapper = styled.div`
     z-index: 800;
 
     & div {
-      opacity: .5;
+      opacity: 1;
+      background-color: rgba(255, 255, 255, .75);
     }
 
     & img {
@@ -27,14 +28,15 @@ const MasonryImageWrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 0;
+    height: 100%;
     opacity: 0;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease;
+    transition: background-color .5s ease, opacity .5s ease;
     border-radius: 15px;
+    cursor: pointer;
 
     & p {
       text-align: center;
@@ -51,41 +53,15 @@ const MasonryImageWrapper = styled.div`
   }
 `;
 
-const MasonryImage = ({image, handleImageClick}) => {
-    const { isPageTransitioning } = useContext(PageTransitionContext);
-
-    const imgRef = useRef(null);
-    const divRef = useRef(null);
-
-    const handleImageLoadAndResize = () => {
-      if (imgRef.current && divRef.current) {
-        divRef.current.style.height = `${imgRef.current.clientHeight}px`;
-      }
-    }
-
-    useEffect(() => {
-      handleImageLoadAndResize();
-
-      window.addEventListener('resize', handleImageLoadAndResize);
-      return () => window.removeEventListener('resize', handleImageLoadAndResize);
-    }, []);
-
-    useEffect(() => {
-        if (!isPageTransitioning) {
-          handleImageLoadAndResize();
-        }
-      }, [isPageTransitioning]);
-
+const MasonryImage = ({image, handleImageClick, customHover}) => {
     return (
       <MasonryImageWrapper>
-        <div ref={divRef} onClick={handleImageClick}>
-          <p>View More</p>
+        <div onClick={handleImageClick}>
+          <p>{customHover ? customHover : 'View More'}</p>
         </div>
         <img
-          ref={imgRef}
           src={image.src}
           alt=""
-          onLoad={handleImageLoadAndResize}
         />
       </MasonryImageWrapper>
     )

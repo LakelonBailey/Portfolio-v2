@@ -9,6 +9,57 @@ import Footer from "../components/Footer";
 import { IconContext } from "react-icons";
 
 import ACTprepImage from '../assets/images/projects/actprep/ACTprep.jpg'
+import PortfolioImage from '../assets/images/projects/portfolio/PortfolioImage.png';
+import CinephilesHomepage from '../assets/images/projects/cinephiles/CinephilesHomepage.png';
+import QuizardHomepage from '../assets/images/projects/quizard/QuizardHomepage.png';
+import MemebookFeed from '../assets/images/projects/memebook/MemebookFeed.png';
+
+const projectsImages = [
+    {
+        src: ACTprepImage,
+        description: {
+            title: 'ACTprep.com Web Application',
+            text: "Web application that facilitates most software processes for ACTprep.com's ACT prep program.",
+            projectPage: 'actprep'
+        },
+    },
+    {
+        src: PortfolioImage,
+        description: {
+            title: 'Personal Website',
+            text: "Personal website that details my skills and experience as a software developer",
+            githubLink: 'https://github.com/LakelonBailey/LakelonBailey.github.io',
+            projectPage: 'portfolio'
+        },
+    },
+    {
+        src: CinephilesHomepage,
+        description: {
+            title: 'Cinephiles',
+            text: "Search for movies and add them to your watchlist!",
+            githubLink: 'https://github.com/LakelonBailey/Cinephiles',
+            projectPage: 'cinephiles'
+        }
+    },
+    {
+        src: QuizardHomepage,
+        description: {
+            title: 'Quizard',
+            text: "Create and take quizzes. Knowledge is power!",
+            githubLink: 'https://github.com/NangTuong/Quizard',
+            projectPage: 'quizard'
+        }
+    },
+    {
+        src: MemebookFeed,
+        description: {
+            title: 'Memebook',
+            text: "Create, like, and share memes. Message your friends!",
+            githubLink: 'https://github.com/LakelonBailey/Memebook',
+            projectPage: 'memebook'
+        }
+    },
+];
 
 
 const ProjectDescriptionContainer = styled.div`
@@ -21,48 +72,54 @@ const ProjectDescriptionTitle = styled.h3`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    & span:first-child {
-        margin-right: 8px
-    }
+    margin: 8px;
+    padding: 0;
 `;
 
 const ProjectDescriptionButtons = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 8px;
 `
 
 const ProjectDescriptionButton = styled.div`
-  & > a, & > button {
-    display: inline-block;
-    padding: 10px 15px;
-    color: white;
-    background-color: var(--theme-1);
-    border-radius: 12px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.5;
-    transition: all 0.2s;
-    margin: 6px;
-    border: none;
 
-    &:hover {
-      background-color: var(--theme-2);
-      box-shadow: 0 2px 8px 0px rgba(0, 0, 0, .5);
-    }
+    & > a, & > button {
+        background-color: #FFFFFF;
+        border: 1px solid rgb(209,213,219);
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #111827;
+        font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: .875rem;
+        font-weight: 600;
+        padding: .75rem 1rem;
+        text-align: center;
+        text-decoration: none #D1D5DB solid;
+        text-decoration-thickness: auto;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
 
-    &:active {
-      background-color: var(--theme-2);
-    }
+        &:hover {
+            background-color: rgb(249,250,251);
+        }
 
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 0.2rem rgba(0,0,0,.25);
+        &:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
+        &:focus-visible {
+            box-shadow: none;
+        }
     }
-  }
 `;
+
 
 const ProjectDescription = ({project, setPage, setModalState, modalState}) => {
 
@@ -78,9 +135,8 @@ const ProjectDescription = ({project, setPage, setModalState, modalState}) => {
     return (
         <ProjectDescriptionContainer>
             <IconContext.Provider value={{size: '30px'}}>
-                <ProjectDescriptionTitle>
-                    <span>{project.title}</span>
-                </ProjectDescriptionTitle>
+                <ProjectDescriptionTitle>{project.title}</ProjectDescriptionTitle>
+                <p>{project.text}</p>
             </IconContext.Provider>
             <ProjectDescriptionButtons>
                 {project.githubLink && (
@@ -97,18 +153,6 @@ const ProjectDescription = ({project, setPage, setModalState, modalState}) => {
         </ProjectDescriptionContainer>
     );
 }
-
-const projectsImages = [
-    {
-        src: ACTprepImage,
-        description: {
-            title: 'ACTprep.com Web Application',
-            githubLink: 'https://github.com/OutliersAdvantage/ACTPrep',
-            projectPage: 'actprep'
-        },
-        backgroundColor: 'black'
-    },
-];
 
 const Projects = ({setPage}) => {
     const [modalState, setModalState] = useState({
@@ -134,6 +178,7 @@ const Projects = ({setPage}) => {
         image={image}
         handleImageClick={(e) => handleImageClick(e, image)}
         key={i}
+        customHover={image.description.title}
         />
     ));
 

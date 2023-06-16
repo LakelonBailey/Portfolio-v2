@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.441f4441.css",
-    "main.js": "/static/js/main.51ce188c.js",
+    "main.css": "/static/css/main.7dcaf060.css",
+    "main.js": "/static/js/main.2ce743a0.js",
     "static/js/787.8c00bc67.chunk.js": "/static/js/787.8c00bc67.chunk.js",
     "static/media/ProfilePic.png": "/static/media/ProfilePic.21a8a941f2c5dfc418b5.png",
     "static/media/AccountabilitySheet.png": "/static/media/AccountabilitySheet.76f8ad22f6c7639ff1a6.png",
@@ -17,12 +17,12 @@
     "static/media/vanderbilt_logo.jpeg": "/static/media/vanderbilt_logo.563e57f098f6632b9184.jpeg",
     "static/media/utk_logo.png": "/static/media/utk_logo.d0658cc86c86fa445b13.png",
     "index.html": "/index.html",
-    "main.441f4441.css.map": "/static/css/main.441f4441.css.map",
-    "main.51ce188c.js.map": "/static/js/main.51ce188c.js.map",
+    "main.7dcaf060.css.map": "/static/css/main.7dcaf060.css.map",
+    "main.2ce743a0.js.map": "/static/js/main.2ce743a0.js.map",
     "787.8c00bc67.chunk.js.map": "/static/js/787.8c00bc67.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.441f4441.css",
-    "static/js/main.51ce188c.js"
+    "static/css/main.7dcaf060.css",
+    "static/js/main.2ce743a0.js"
   ]
 }
