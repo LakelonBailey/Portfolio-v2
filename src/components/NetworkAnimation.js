@@ -52,7 +52,7 @@ const NetworkAnimation = ({ parentRef }) => {
         const maxDist = 75; // Adjust this value as needed
 
         if(dist < maxDist){
-        ctx.lineWidth = Math.max(1, 100 / dist);
+        ctx.lineWidth = Math.max(.5, 5 / dist);
 
         ctx.beginPath();
         ctx.moveTo(edge.node1.x, edge.node1.y);
