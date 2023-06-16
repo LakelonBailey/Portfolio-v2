@@ -9,6 +9,7 @@ import Portfolio from '../pages/projects/Portfolio';
 import Cinephiles from '../pages/projects/Cinephiles';
 import Quizard from '../pages/projects/Quizard';
 import Memebook from '../pages/projects/Memebook';
+import OriginalPortfolio from '../pages/projects/OriginalPortfolio';
 
 // Data
 const projectPages = {
@@ -26,7 +27,10 @@ const projectPages = {
     },
     'memebook': {
         element: <Memebook />
-    }
+    },
+    'original-portfolio': {
+        element: <OriginalPortfolio />
+    },
 };
 
 export default projectPages;

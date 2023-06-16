@@ -13,6 +13,7 @@ import PortfolioImage from '../assets/images/projects/portfolio/PortfolioImage.p
 import CinephilesHomepage from '../assets/images/projects/cinephiles/CinephilesHomepage.png';
 import QuizardHomepage from '../assets/images/projects/quizard/QuizardHomepage.png';
 import MemebookFeed from '../assets/images/projects/memebook/MemebookFeed.png';
+import OriginalPortfolioHomepage from '../assets/images/projects/original-portfolio/OriginalPortfolioHomepage.png';
 
 const projectsImages = [
     {
@@ -57,6 +58,15 @@ const projectsImages = [
             text: "Create, like, and share memes. Message your friends!",
             githubLink: 'https://github.com/LakelonBailey/Memebook',
             projectPage: 'memebook'
+        }
+    },
+    {
+        src: OriginalPortfolioHomepage,
+        description: {
+            title: 'Original Portfolio',
+            text: "My original personal website and first-ever deployed website.",
+            githubLink: 'https://github.com/LakelonBailey/LakelonBailey.io',
+            projectPage: 'original-portfolio'
         }
     },
 ];

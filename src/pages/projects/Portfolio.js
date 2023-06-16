@@ -24,7 +24,7 @@ const Portfolio = () => {
 
                     <SectionContainer>
                         <h3>My Contribution</h3>
-                        <p>I completed the entirety of this website</p>
+                        <p>I developed the entirety of this website</p>
                     </SectionContainer>
 
                     <SectionContainer>
