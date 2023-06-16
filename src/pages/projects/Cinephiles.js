@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import PageBox from "../../components/PageBox";
-import styled from "styled-components";
-import Section, {SectionHeader} from "../../components/Section";
+import Section from "../../components/Section";
 import PhotoMasonry from "../../components/PhotoMasonry";
 import MasonryImage from "../../components/MasonryImage";
 import ImageModal from "../../components/ImageModal";

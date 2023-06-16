@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import PageBox from "../components/PageBox";
-import PhotoMasonry from "../components/PhotoMasonry";
 import MasonryImage from "../components/MasonryImage";
 import ImageModal from "../components/ImageModal";
 import styled from "styled-components";

@@ -1,13 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import PageBox from "../../components/PageBox";
-import styled from "styled-components";
 import Section from "../../components/Section";
 import Footer from "../../components/Footer";
 import {
     ProjectHeader,
     ProjectInfoContainer,
     SectionContainer,
-    ImageDescription
 } from '../../components/ProjectPages';
 
 const OriginalPortfolio = () => {
