@@ -2,29 +2,29 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 
 const theme = keyframes`
-  0% {
-      background: #FFFFFF;
-  }
+    0% {
+        background: #FFFFFF;
+    }
 
-  20% {
-      background: #F5F5F5;
-  }
+    20% {
+        background: #F5F5F5;
+    }
 
-  40% {
-      background: #DCDCDC;
-  }
+    40% {
+        background: #DCDCDC;
+    }
 
-  60% {
-      background: #C0C0C0;
-  }
+    60% {
+        background: #C0C0C0;
+    }
 
-  80% {
-      background: #808080;
-  }
+    80% {
+        background: #c7c7c7;
+    }
 
-  100% {
-      background: #FFFFFF;
-  }
+    100% {
+        background: #FFFFFF;
+    }
 `;
 
 const background = keyframes`

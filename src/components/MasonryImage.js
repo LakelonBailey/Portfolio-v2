@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useContext } from "react"
 import styled from "styled-components";
-import { PageTransitionContext } from '../context/PageTransitionContext';
 
 const MasonryImageWrapper = styled.div`
   width: 100%;

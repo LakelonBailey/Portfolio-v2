@@ -1,7 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
-import MasonryImage from "./MasonryImage";
-import ImageModal from "./ImageModal";
 import styled from "styled-components";
 
 
