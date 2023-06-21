@@ -217,10 +217,6 @@ const About = () => {
                     </InterestSubSection>
                 </InterestsContainer>
             </Section>
-            <Section>
-                <SectionHeader>Photos</SectionHeader>
-                <p style={{width:'100%', textAlign: 'center',fontSize: '50px'}}><strong>Coming soon!</strong></p>
-            </Section>
             <Footer />
             <ImageModal
             isActive={modalState.active}
