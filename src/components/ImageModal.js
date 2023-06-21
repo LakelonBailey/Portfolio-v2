@@ -7,13 +7,11 @@ const MODAL_OPEN_DURATION = '.5s';
 const imageAnimation = (left, top) => keyframes`
     0% {
         left: ${left}px;
-        top: ${top}px;
-        transform: translate(0%, 0%);
+        transform: translate(0%, 0%) scale(1);
     }
     100% {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        left: 50%;;
+        transform: translateX(-50%) scale(1.25);
     }
 `;
 
@@ -53,16 +51,17 @@ const ImageModalContent = styled.div`
     background-color: #fefefe;
     position: relative;
     left: 50%;
-    top: 50%;
+    top: 10vh;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    animation: ${({imageLeft, imageTop}) => imageAnimation(imageLeft, imageTop)} ${MODAL_OPEN_DURATION} ease forwards;
+    animation: ${({imageLeft, imageTop, imageWidth}) => imageAnimation(imageLeft, imageTop, imageWidth)} ${MODAL_OPEN_DURATION} ease forwards;
     border-radius: 15px;
     width: ${({imageWidth}) => imageWidth}px;
     height: fit-content;
+    max-width: 90vw;
+    margin: 2vh 0;
     padding: 0;
-    max-width: 70vw;
 `;
 
 const ModalImage = styled.img`
