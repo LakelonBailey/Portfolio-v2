@@ -11,7 +11,8 @@ import {
     ProjectHeader,
     ProjectInfoContainer,
     SectionContainer,
-    ImageDescription
+    ImageDescription,
+    BackToProjectsLink
 } from '../../components/ProjectPages';
 
 // Images
@@ -55,7 +56,7 @@ const actprepImages = [
     }
 ]
 
-const ACTPrep = () => {
+const ACTPrep = ({setPage}) => {
 
     const [modalState, setModalState] = useState({
         image: null,
@@ -89,6 +90,7 @@ const ACTPrep = () => {
                 <ProjectHeader>ACTprep.com Web Application</ProjectHeader>
                 <ProjectInfoContainer>
                     <SectionContainer>
+                        <BackToProjectsLink onClick={() => setPage('projects')} href="#">&#8592; Back to Projects</BackToProjectsLink>
                         <h3>Description</h3>
                         <p><a href="https://actprep.com" style={{fontWeight: 'bold'}}>ACTprep.com</a> is a successful Knoxville-based ACT tutoring company. This application facilitates all internal data collection, calculation, and display for ACTprep.com. It handles over 60 daily users, including coaches, students, parents, enrollment coordinators, and more.</p>
                         <p>This application is highly interactive, involving complex user interfaces and functionalities for all types of users. Since this application became the primary technology used by ACTprep.com, all internal processes have been streamlined, drastically improving the overall scalability of the company.</p>
@@ -103,6 +105,20 @@ const ACTPrep = () => {
                             <li>Parents are able to monitor their students' progress across several metrics at all times.</li>
                             <li>Enrollment coordinators are able to easily monitor new students'/parents' progress throughout the onboarding process.</li>
                         </ul>
+                        <br />
+                        <div style={{
+                            padding: '12px',
+                            borderRadius: '10px',
+                            backgroundColor: 'rgba(var(--theme-2-rgb), .25)'
+                        }}>
+                            <p style={{fontStyle: 'italic', fontWeight: 'bold'}}>
+                                "The application developed by Lake Bailey has been nothing short of transformative for our organization. It has ushered us into the digital age by automating tedious tasks, freeing up resources that we've been able to redirect towards areas of higher impact. More than just a tool, it has revolutionized our curriculum by digitizing it, leading to substantial savings in printing and labor costs that amount to tens of thousands of dollars annually.
+                            </p>
+                            <p style={{fontStyle: 'italic', fontWeight: 'bold'}}>
+                                Furthermore, it has enhanced our coaching capacity, nearly doubling the number of students each coach can effectively mentor. But perhaps its most significant contribution is how it has become the backbone of our operations, seamlessly managing and streamlining our processes. In essence, it is the engine that now drives our entire company."
+                            </p>
+                            <p> - Bobby Nicholson, CEO, ACTprep.com, Inc.</p>
+                        </div>
                     </SectionContainer>
 
                     <SectionContainer>
@@ -122,7 +138,7 @@ const ACTPrep = () => {
                         <p>Having worked on it for well over a year, this project is responsible for the majority of my understanding of full-stack development. It has aided in sigificantly increasing my understanding of all coding languages used. Along with this, it has taught me the value of following best practices, maintaining a logical relational database structure, refined user interfaces, efficient database queries, and more.</p>
                     </SectionContainer>
                     <SectionContainer>
-                        <h3>Photos</h3>
+                        <h3>My Favorite Features</h3>
                         <PhotoMasonry images={images}/>
                     </SectionContainer>
                 </ProjectInfoContainer>

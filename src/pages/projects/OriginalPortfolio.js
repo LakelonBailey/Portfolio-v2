@@ -6,15 +6,17 @@ import {
     ProjectHeader,
     ProjectInfoContainer,
     SectionContainer,
+    BackToProjectsLink
 } from '../../components/ProjectPages';
 
-const OriginalPortfolio = () => {
+const OriginalPortfolio = ({setPage}) => {
     return (
         <PageBox>
             <Section>
                 <ProjectHeader>Original Personal Website</ProjectHeader>
                 <ProjectInfoContainer>
                     <SectionContainer>
+                        <BackToProjectsLink onClick={() => setPage('projects')} href="#">&#8592; Back to Projects</BackToProjectsLink>
                         <h3>Links</h3>
                         <p>Github: <span><a target="_blank" rel="noreferrer" href="https://github.com/LakelonBailey/LakelonBailey.io">https://github.com/LakelonBailey/LakelonBailey.io</a></span></p>
                         <p>Live Site: <span><a target="_blank" rel="noreferrer" href="https://lakelonbailey.github.io/LakelonBailey.io">https://lakelonbailey.github.io/LakelonBailey.io</a></span></p>

@@ -10,7 +10,8 @@ import {
     ProjectHeader,
     ProjectInfoContainer,
     SectionContainer,
-    ImageDescription
+    ImageDescription,
+    BackToProjectsLink
 } from '../../components/ProjectPages';
 
 // Images
@@ -54,7 +55,7 @@ const quizardImages = [
     }
 ]
 
-const Quizard = () => {
+const Quizard = ({setPage}) => {
 
     const [modalState, setModalState] = useState({
         image: null,
@@ -88,6 +89,7 @@ const Quizard = () => {
                 <ProjectHeader>Quizard</ProjectHeader>
                 <ProjectInfoContainer>
                     <SectionContainer>
+                        <BackToProjectsLink onClick={() => setPage('projects')} href="#">&#8592; Back to Projects</BackToProjectsLink>
                         <h3>Links</h3>
                         <p>Github: <span><a target="_blank" rel="noreferrer"  href="https://github.com/NangTuong/Quizard">https://github.com/NangTuong/Quizard</a></span></p>
                     </SectionContainer>

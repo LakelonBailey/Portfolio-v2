@@ -15,19 +15,20 @@ const ProjectInfoContainer = styled.div`
     flex-direction: column;
 `;
 
+const BackToProjectsLink = styled.a`
+    text-decoration: none;
+`;
+
 
 const SectionContainer = styled.div`
     padding: 20px;
-    border: 1px solid #ddd; // Light border
-    border-radius: 5px; // Rounded corners
-    margin-bottom: 20px; // Space between sections
-    background-color: #fff; // White background
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
     h3 {
-        color: #333; // Dark text
-        margin-bottom: 10px; // Space under header
-    }
-    p {
-        color: #666; // Lighter text
+        color: #333;
+        margin-bottom: 10px;
     }
 `;
 
@@ -39,5 +40,6 @@ export {
     ProjectHeader,
     ProjectInfoContainer,
     SectionContainer,
-    ImageDescription
+    ImageDescription,
+    BackToProjectsLink
 }

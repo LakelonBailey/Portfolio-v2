@@ -10,7 +10,8 @@ import {
     ProjectHeader,
     ProjectInfoContainer,
     SectionContainer,
-    ImageDescription
+    ImageDescription,
+    BackToProjectsLink
 } from '../../components/ProjectPages';
 
 // Images
@@ -69,7 +70,7 @@ const memebookImages = [
     }
 ]
 
-const Memebook = () => {
+const Memebook = ({setPage}) => {
 
     const [modalState, setModalState] = useState({
         image: null,
@@ -103,6 +104,7 @@ const Memebook = () => {
                 <ProjectHeader>Memebook</ProjectHeader>
                 <ProjectInfoContainer>
                     <SectionContainer>
+                        <BackToProjectsLink onClick={() => setPage('projects')} href="#">&#8592; Back to Projects</BackToProjectsLink>
                         <h3>Links</h3>
                         <p>GitHub: <span><a href="https://github.com/LakelonBailey/Memebook" target="_blank" rel="noreferrer">https://github.com/LakelonBailey/Memebook</a></span></p>
                     </SectionContainer>

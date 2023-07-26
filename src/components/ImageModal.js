@@ -7,11 +7,13 @@ const MODAL_OPEN_DURATION = '.5s';
 const imageAnimation = (left, top) => keyframes`
     0% {
         left: ${left}px;
+        top: ${top}px;
         transform: translate(0%, 0%) scale(1);
     }
     100% {
-        left: 50%;;
-        transform: translateX(-50%) scale(1.25);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1.25);
     }
 `;
 
@@ -129,7 +131,6 @@ const ImageModal = ({isActive, setModalState, image, children}) => {
     const handleContentClick = (e) => {
         e.stopPropagation();
     };
-
     return createPortal((
         <ImageModalContainer isActive={isActive} onClick={handleClose}>
         {image && isActive && (
@@ -137,12 +138,12 @@ const ImageModal = ({isActive, setModalState, image, children}) => {
             onClick={handleContentClick}
             imageLeft={parseInt(image.info.left)}
             imageTop={parseInt(image.info.top)}
-            imageWidth={image.width}
+            imageWidth={Math.max(image.width, 300)}
             >
                 <CloseIcon onClick={handleClose}><FaTimes size={'25px'}/></CloseIcon>
                 <ModalImage
                 src={image.src}
-                imageWidth={image.width}
+                imageWidth={Math.max(image.width, 300)}
                 isActive={isActive}
                 alt="" />
                 <DescriptionBox>

@@ -6,16 +6,17 @@ import {
     ProjectHeader,
     ProjectInfoContainer,
     SectionContainer,
-    ImageDescription
+    BackToProjectsLink
 } from '../../components/ProjectPages';
 
-const Portfolio = () => {
+const Portfolio = ({setPage}) => {
     return (
         <PageBox>
             <Section>
                 <ProjectHeader>Personal Website</ProjectHeader>
                 <ProjectInfoContainer>
                     <SectionContainer>
+                        <BackToProjectsLink onClick={() => setPage('projects')} href="#">&#8592; Back to Projects</BackToProjectsLink>
                         <h3>Description</h3>
                         <p>My personal website is the most detailed and comprehensive representation of my software development career. As time goes on, I will continue to fill its pages with information regarding my learning, accomplishments, experience, and more. I coded this website using very few frameworks and libraries.</p>
                         <p>I hope you enjoy it!</p>

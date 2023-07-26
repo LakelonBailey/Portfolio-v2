@@ -137,8 +137,7 @@ const Page = ({pages, currentPage, previousPage, setPage}) => {
                     style={{display: (pageKey === currentPage || (pageKey === previousPage && !animationEnded[pageKey])) ? "block" : "none"}}
                 >
                     <InnerPageContainer onAnimationEnd={() => handleAnimationEnd(pageKey)} className={getPageClass(pageKey, i)}>
-                        {pageKey === 'projects' && React.cloneElement(pageInfo.element, { setPage })}
-                        {pageKey !=='projects' && pageInfo.element}
+                        {React.cloneElement(pageInfo.element, { setPage })}
                     </InnerPageContainer>
                 </PageContainer>
             ))}

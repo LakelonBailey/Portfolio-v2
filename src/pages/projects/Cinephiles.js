@@ -10,7 +10,8 @@ import {
     ProjectHeader,
     ProjectInfoContainer,
     SectionContainer,
-    ImageDescription
+    ImageDescription,
+    BackToProjectsLink
 } from '../../components/ProjectPages';
 
 // Images
@@ -39,7 +40,7 @@ const cinephilesImages = [
     },
 ]
 
-const Cinephiles = () => {
+const Cinephiles = ({setPage}) => {
 
     const [modalState, setModalState] = useState({
         image: null,
@@ -73,6 +74,7 @@ const Cinephiles = () => {
                 <ProjectHeader>Cinephiles</ProjectHeader>
                 <ProjectInfoContainer>
                     <SectionContainer>
+                        <BackToProjectsLink onClick={() => setPage('projects')} href="#">&#8592; Back to Projects</BackToProjectsLink>
                         <h3>Links</h3>
                         <p>Github: <span><a target="_blank" rel="noreferrer" href="https://github.com/LakelonBailey/Cinephiles">https://github.com/LakelonBailey/Cinephiles</a></span></p>
                     </SectionContainer>

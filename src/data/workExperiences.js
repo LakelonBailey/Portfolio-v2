@@ -10,7 +10,8 @@ const workExperiences = [
                     "Leading a pivotal role in the transformation of the application from a monolithic design to a microservices-based structure, enabling more scalable, maintainable, and resilient system performance.",
                     "Refining and implementing modern authentication and authorization mechanisms, significantly improving system security and user experience by ensuring the right access controls for various user roles.",
                     "Collaborating closely with a dynamic team, adapting to agile methodologies, and utilizing problem-solving skills to navigate complex software development challenges.",
-                    "Gaining extensive experience with large-scale application development, cloud computing, and cybersecurity best practices, all in a global corporate setting."
+                    "Reduced on-page-load API calls by 68% by removing unnecessary data retrieval."
+
                 ]
             }
         ]
@@ -23,9 +24,9 @@ const workExperiences = [
                 duration: 'March 2023 - Present',
                 notes: [
                     "Managing the technology division of ACTprep.com.",
-                    "Leading the development and maintenance of the ACTprep.com web application: an application designed to receive and process all company data for the purpose of coaching, analytics, student progress monitoring, and more.",
-                    "Building a team of developers for ACTprep.com as we transition to more technology-dependent operations.",
-                    "Contributing to the future of ACTprep.com through calculated decisions and consistent reevaluation of company policies."
+                    "Leading the development and maintenance of the ACTprep.com web application: an application designed to receive and process all company data for the purpose of coaching, analytics, student progress monitoring, and more. This application serves approximately 100 daily users and involves over 30 unique database tables.",
+                    "Improving scale of the company by increasing the total possible students a coach can mentor by over 100%.",
+                    "Consistently decreasing company costs, having reduced annual labor/supplies costs by over $50,000."
                 ]
             }
         ]
@@ -38,9 +39,9 @@ const workExperiences = [
                 duration: 'August 2022 - March 2023',
                 notes: [
                     "Managed and developed the ACTprep.com web application project.",
-                    "Assisted in backend and frontend development for assorted company projects",
-                    "Developed and optimized generalized internal software to be used across full-stack projects.",
-                    "Successfully developed a translation pathway to fully migrate a MySQL database to a MongoDB Atlas Cluster while maintaining data relationships for a database containing over 150,000 total records.",
+                    "Assisted in backend and frontend development for assorted company projects.",
+                    "Accelerated the primary data query speed of https://postageapi.com/stats/ page by over 99%.",
+                    "Successfully developed a translation pathway to fully migrate a MySQL database to a MongoDB Atlas Cluster while maintaining data relationships for a database containing over 150,000 total records."
                 ]
             }
         ]
@@ -53,7 +54,8 @@ const workExperiences = [
                 duration: 'May 2022 - August 2022',
                 notes: [
                     "Developed a full-stack web application that utilizes the Google Sheets API to store student enrollment data provided by new students as they traverse through the application’s enrollment process. ",
-                    "Streamlined the ACTprep.com enrollment process by relieving the enrollment coordinator of the need to retrieve student enrollment data through text communication."
+                    "Streamlined the ACTprep.com enrollment process by relieving the enrollment coordinator of the need to retrieve student enrollment data through text communication.",
+                    "This application successfully facilitated the enrollment process of over 100 students.",
                 ]
             },
         ]
