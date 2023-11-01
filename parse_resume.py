@@ -36,8 +36,8 @@ with open('src/assets/files/lakelon_bailey_resume.pdf', 'rb') as fl:
     ]
     sentences = [f"{sentence}." for sentence in sentences if sentence]
     clean_lines = sentences
-    company = 'test'
-    title = 'test'
+    company = None
+    title = None
     for i, line in enumerate(clean_lines):
         line = line.strip()
         first_word = line.split(' ')[0].strip()
@@ -51,16 +51,13 @@ with open('src/assets/files/lakelon_bailey_resume.pdf', 'rb') as fl:
                 'notes': []
             }
 
-            company_data = jobs.get(company, None)
-            if company_data is None:
-                company_data = {
-                    'company': company.strip(),
-                    'positions': [position]
-                }
-            else:
-                company_data['positions'].append(position)
-
+            company_data = jobs.get(company, {
+                'company': company.strip(),
+                'positions': []
+            })
+            company_data['positions'].append(position)
             jobs[company] = company_data
+
             continue
 
         for pos in jobs[company]['positions']:
