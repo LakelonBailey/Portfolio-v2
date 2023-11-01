@@ -3,11 +3,11 @@ import PageBox from "../components/PageBox";
 import styled from "styled-components";
 import Section, {SectionHeader} from "../components/Section";
 import ProgressBar from "../components/ProgressBar";
-import workExperiences from "../data/workExperiences";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import UTKLogo from '../assets/images/utk_logo.png';
 import VanderbiltLogo from '../assets/images/vanderbilt_logo.jpeg';
 import BootcampCertificate from '../assets/files/lakelon_bailey_bootcamp_certificate.pdf';
+import jobData from '../data/jobData.json';
 
 import {
     FaCode,
@@ -54,9 +54,6 @@ const Position = styled.li`
     padding-bottom: 12px;
     &:not(:first-child) {
         padding-top: 8px;
-    }
-    &:not(:last-child) {
-        border-bottom: 1px solid var(--theme-2);
     }
 `;
 
@@ -132,7 +129,7 @@ const WorkExperienceCard = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background-color: rgba(var(--theme-2-rgb), .3);
     transition: 0.3s;
-    // border-radius: 5px;
+
     &:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
@@ -227,7 +224,7 @@ const Resume = () => {
                         width: '95%'
                     }}>
                         <Masonry columnsCount={2} gutter="12px">
-                            {workExperiences.map((workExperience, i) => (
+                            {jobData.map((workExperience, i) => (
                             <WorkExperienceCard key={i}>
                                 <div>
                                     <WorkExperienceCompany>{workExperience.company}</WorkExperienceCompany>

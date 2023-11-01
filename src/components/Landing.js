@@ -15,25 +15,6 @@ const slideOut = (direction) => keyframes`
     }
 `;
 
-const colorChange = keyframes`
-    0% {
-        opacity: 1;
-    }
-    50%, 100% {
-        opacity: 0;
-    }
-`;
-
-const background = keyframes`
-  0% {
-      transform: rotate(0deg);
-  }
-
-  100% {
-      transform: rotate(360deg);
-  }
-`;
-
 
 const LandingContainer = styled.div`
     position: fixed;
