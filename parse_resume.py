@@ -22,29 +22,28 @@ with open('src/assets/files/lakelon_bailey_resume.pdf', 'rb') as fl:
         .extract_text()
         .split('WORK EXPERIENCE')[-1]
         .split('INVOLVEMENT')[0]
-        .replace('   ', '\n')
+        .replace('\n', ' ')
     )
-    buf = ""
-    text = text.replace('\n', ' ')
-    jobs = {}
 
     sections = text.split('•')
     sentences = [
-        sentence.strip()
+        f"{sentence.strip()}."
         for line in sections
         for sentence in re.split(r'(?<!Inc)\. ', line)
+        if sentence.strip()
     ]
-    sentences = [f"{sentence}." for sentence in sentences if sentence]
-    clean_lines = sentences
+
     company = None
     title = None
-    for i, line in enumerate(clean_lines):
+    jobs = {}
+    for i, line in enumerate(sentences):
         line = line.strip()
         first_word = line.split(' ')[0].strip()
         if first_word in title_first_words:
             title, *_, duration = line.split('   ')
             title, company = title.split(', ', maxsplit=1)
             duration = duration.strip().replace('\u2013', '-')
+
             position = {
                 'title': title.strip(),
                 'duration': duration.strip(),
@@ -55,6 +54,7 @@ with open('src/assets/files/lakelon_bailey_resume.pdf', 'rb') as fl:
                 'company': company.strip(),
                 'positions': []
             })
+
             company_data['positions'].append(position)
             jobs[company] = company_data
 
