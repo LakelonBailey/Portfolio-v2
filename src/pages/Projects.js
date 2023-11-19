@@ -14,6 +14,7 @@ import CinephilesHomepage from '../assets/images/projects/cinephiles/CinephilesH
 import QuizardHomepage from '../assets/images/projects/quizard/QuizardHomepage.png';
 import MemebookFeed from '../assets/images/projects/memebook/MemebookFeed.png';
 import OriginalPortfolioHomepage from '../assets/images/projects/original-portfolio/OriginalPortfolioHomepage.png';
+import FragranceFinderHome from '../assets/images/projects/fragrance-finder/FragranceFinderHome.png';
 
 const projectsImages = [
     {
@@ -59,6 +60,14 @@ const projectsImages = [
             githubLink: 'https://github.com/LakelonBailey/Memebook',
             projectPage: 'memebook'
         }
+    },
+    {
+        src: FragranceFinderHome,
+        description: {
+            title: 'Fragrance Finder',
+            text: "Find the best fragrance prices!",
+            projectPage: 'fragrance-finder'
+        },
     },
     {
         src: OriginalPortfolioHomepage,

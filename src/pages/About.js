@@ -171,7 +171,7 @@ const About = () => {
                     </AboutSubSection>
                     <AboutSubSection>
                         <AboutSectionHeader>My Goals</AboutSectionHeader>
-                        <p>With a current interest in <BoldSpan>Data Engineering</BoldSpan>, <BoldSpan>Cloud Software</BoldSpan>, or <BoldSpan>API Development</BoldSpan>, I am currently seeking a career in one of these fields. However, I fully appreciate the fluidity of the tech industry and remain open to future pivots. Committed to lifelong learning and with extensive education yet to come, I am eager to embrace new challenges, diversify my skillset, and explore a variety of computer science domains throughout my career journey.</p>
+                        <p>With a current interest in <BoldSpan>Data Engineering</BoldSpan>, <BoldSpan>Cloud Engineering</BoldSpan>, or <BoldSpan>Systems Programming</BoldSpan>, I am currently seeking a career in one of these fields. However, I fully appreciate the fluidity of the tech industry and remain open to future pivots. Committed to lifelong learning and with extensive education yet to come, I am eager to embrace new challenges, diversify my skillset, and explore a variety of computer science domains throughout my career journey.</p>
                     </AboutSubSection>
                     <AboutSubSection>
                         <AboutSectionHeader>Leadership</AboutSectionHeader>

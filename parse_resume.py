@@ -8,8 +8,7 @@ title_first_words = [
     'Data',
     'Senior',
     'Junior',
-    'Full-stack'
-    'Full-Stack'
+    'Full-Stack',
     'Full',
 ]
 
@@ -23,6 +22,7 @@ with open('src/assets/files/lakelon_bailey_resume.pdf', 'rb') as fl:
         .split('WORK EXPERIENCE')[-1]
         .split('INVOLVEMENT')[0]
         .replace('\n', ' ')
+        .replace('\u2019', "'")
     )
 
     sections = text.split('•')
@@ -61,7 +61,7 @@ with open('src/assets/files/lakelon_bailey_resume.pdf', 'rb') as fl:
             continue
 
         for pos in jobs[company]['positions']:
-            if pos['title'] == title:
+            if pos['title'] == title and pos['duration'] == duration:
                 pos['notes'].append(line)
                 break
 

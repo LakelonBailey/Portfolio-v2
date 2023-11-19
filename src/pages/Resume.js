@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageBox from "../components/PageBox";
 import styled from "styled-components";
 import Section, {SectionHeader} from "../components/Section";
@@ -8,6 +8,7 @@ import UTKLogo from '../assets/images/utk_logo.png';
 import VanderbiltLogo from '../assets/images/vanderbilt_logo.jpeg';
 import BootcampCertificate from '../assets/files/lakelon_bailey_bootcamp_certificate.pdf';
 import jobData from '../data/jobData.json';
+import additionalJobData from '../data/additionalJobData.json';
 
 import {
     FaCode,
@@ -215,6 +216,22 @@ const CertificateLink = styled.a`
 
 
 const Resume = () => {
+    const [jobs, setJobs] = useState([]);
+
+    useEffect(() => {
+        let jobCopy = {};
+        for (let co of [...jobData, ...additionalJobData]) {
+            if (!jobCopy[co.company]) {
+                jobCopy[co.company] = {
+                    company: co.company,
+                    positions: []
+                }
+            }
+            jobCopy[co.company].positions.push(...co.positions);
+        }
+        setJobs(Object.values(jobCopy));
+    }, [])
+
     return (
         <PageBox>
             <Section>
@@ -224,7 +241,7 @@ const Resume = () => {
                         width: '95%'
                     }}>
                         <Masonry columnsCount={2} gutter="12px">
-                            {jobData.map((workExperience, i) => (
+                            {jobs.map((workExperience, i) => (
                             <WorkExperienceCard key={i}>
                                 <div>
                                     <WorkExperienceCompany>{workExperience.company}</WorkExperienceCompany>

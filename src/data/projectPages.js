@@ -7,6 +7,7 @@ import Cinephiles from '../pages/projects/Cinephiles';
 import Quizard from '../pages/projects/Quizard';
 import Memebook from '../pages/projects/Memebook';
 import OriginalPortfolio from '../pages/projects/OriginalPortfolio';
+import FragranceFinder from '../pages/projects/FragranceFinder';
 
 // Data
 const projectPages = {
@@ -28,6 +29,9 @@ const projectPages = {
     'original-portfolio': {
         element: <OriginalPortfolio />
     },
+    'fragrance-finder': {
+        element: <FragranceFinder />
+    }
 };
 
 export default projectPages;

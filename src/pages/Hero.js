@@ -106,9 +106,22 @@ const DownloadResumeButton = styled.a`
     & span:first-child {
         margin-right: 8px
     }
-`
+`;
 
-const Hero = () => {
+const SeeProjectsLink = styled.div`
+    width: 100%;
+    display: flex;
+    & a {
+        text-decoration: none;
+    }
+    margin-left: 15%;
+    @media (max-width: 1000px) {
+        justify-content: center;
+        margin-left: 0%;
+    }
+`;
+
+const Hero = ({setPage}) => {
 
     const diameter = '30vw';
     return (
@@ -136,6 +149,14 @@ const Hero = () => {
                                     <FaGithubSquare color="black" size={'50px'} />
                                 </a>
                                 <DownloadResumeButton href={resumeFile} target="_blank"><span>Resume</span><span><FaFileDownload size={'15px'}/></span></DownloadResumeButton>
+                                <SeeProjectsLink>
+                                <a
+                                onClick={() => setPage('projects')}
+                                href="#"
+                                >
+                                    View My Work &#x2192;
+                                </ a>
+                            </SeeProjectsLink>
                             </HeroIcons>
                         </HeroContent>
                     </HeroContainer>
