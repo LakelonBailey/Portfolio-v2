@@ -308,15 +308,15 @@ const Resume = () => {
                             </SoftwareList>
                             <SoftwareList>
                                 <p>Back-end</p>
-                                <p>Django, Flask, Express, Spring, Sequelize, Mongoose, Prisma, NodeJS, REST APIs</p>
+                                <p>Django, Flask, Express, Spring, Sequelize, Mongoose, Prisma, NodeJS</p>
                             </SoftwareList>
                             <SoftwareList>
                                 <p>Data</p>
-                                <p>GraphQL, MongoDB, MySQL, PostgreSQL, SQLite, Pandas, Numpy</p>
+                                <p>GraphQL, MongoDB, MySQL, PostgreSQL, SQLite, Pandas, Numpy, IBM Data Engine, IBM Carrot Framework</p>
                             </SoftwareList>
                             <SoftwareList>
                                 <p>Cloud</p>
-                                <p>AWS S3, Google Cloud, Digital Ocean, Heroku</p>
+                                <p>IBM Cloud Object Storage, AWS S3, Google Cloud, Digital Ocean, Heroku</p>
                             </SoftwareList>
                         </SectionList>
                     </SubSection>
@@ -330,9 +330,6 @@ const Resume = () => {
                                 <SectionList>
                                     <TechniqueListItem>
                                         <span><FaCheck color="var(--theme-1)" /></span><span>Object-oriented Programming</span>
-                                    </TechniqueListItem>
-                                    <TechniqueListItem>
-                                        <span><FaCheck color="var(--theme-1)" /></span><span>Functional Programming</span>
                                     </TechniqueListItem>
                                     <TechniqueListItem>
                                         <span><FaCheck color="var(--theme-1)" /></span><span>Test-driven Development</span>
@@ -383,7 +380,7 @@ const Resume = () => {
                         <EducationDetails>
                             <UniversityTitle>University of Tennessee, Knoxville</UniversityTitle>
                             <DegreeTitle>Bachelor of Science, Computer Science</DegreeTitle>
-                            <EducationYear>2020 - Present</EducationYear>
+                            <EducationYear>Fall 2020 - May 2025</EducationYear>
                         </EducationDetails>
                     </EducationCard>
                     <EducationCard>

@@ -6,8 +6,9 @@
         "title": "Data Software Engineer Co-op",
         "duration": "August 2023 - Present.",
         "notes": [
-          "Designing and implementing a robust pipeline to rapidly transport 4,000,000+ records across 10+ tables from ServiceNow to IBM Cloud Object Storage.",
-          "Leading the introduction of IBM's Carrot Framework to the Devices Data Insights team, resulting in productivity enhancements and improved codebase structure for data pipelines and reporting."
+          "Leading the introduction of IBM's Carrot Framework to the Devices Data Insights team, resulting in productivity enhancements and improved codebase structure for data pipelines and reporting.",
+          "Designing and implementing a robust pipeline to rapidly transport 4,000,000+ records from 10+ critical tables from ServiceNow to IBM Cloud Object Storage.",
+          "Migrated SQL-based data reporting processes to the new pipeline, leveraging IBM Cloud Object Storage data."
         ]
       },
       {
@@ -17,7 +18,7 @@
           "Contributed to the strategic re-architecture of a global Vue.js/Spring Boot application that facilitates over 315k users, including all IBM employees.",
           "Lead a pivotal role in the transformation of the application from a monolithic design to a microservices-based structure.",
           "Refined and implemented modern authentication and authorization mechanisms, significantly improving system security and user experience by ensuring the right access controls for various user roles.",
-          "Reduced on-page-load API calls by 68% by re-organizing and optimizing data retrieval."
+          "Organized and optimized data retrieval, leading to a 68% reduction in on-page-load API calls."
         ]
       }
     ]
@@ -29,11 +30,11 @@
         "title": "Software Engineer",
         "duration": "March 2023 - Present.",
         "notes": [
-          "Managing the technology division of ACTprep.com.",
           "Leading the development and maintenance of the ACTprep.com web application: an application designed to receive and process all company data for the purpose of coaching, analytics, student progress monitoring, and more.",
-          "This application serves approximately 100 daily users and involves over 30 unique database tables.",
+          "This application serves approximately 100 daily users.",
           "Improving the scale of the company by increasing the total number of students a coach can mentor by over 100%.",
-          "Consistently decreasing company costs, having reduced annual labor/supplies costs by over $50,000."
+          "Consistently decreasing company costs, having reduced annual labor/supplies costs by over $50,000.",
+          "Successfully interviewed, hired, and trained a Software Engineering Intern."
         ]
       },
       {
@@ -55,7 +56,6 @@
         "duration": "August 2022 - March 2023.",
         "notes": [
           "Managed and developed the ACTprep.com web application project.",
-          "Assisted in backend and frontend development for assorted company projects.",
           "Accelerated the primary data query speed of https://postageapi.com/stats/ page by over 99%.",
           "Developed a data pipeline to fully migrate a MySQL database to a MongoDB Atlas Cluster while maintaining table relationships for a database containing over 150,000 total records."
         ]

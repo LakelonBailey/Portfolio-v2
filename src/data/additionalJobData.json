@@ -1,35 +1,49 @@
 [
     {
-      "company": "ACTprep.com, Inc.",
-      "positions": [
-        {
-            "title": "One on One Tutor",
-            "duration": "June 2020 - February 2022",
-            "notes": [
-                "Coached 18 students in a one-on-one format for a total of 270 hours.",
-                "Maintained full responsibility over one-on-one students, including progress monitoring, student and parent communication, and student performance data collection and analysis.",
-                "Developed student-specific program and curriculum structures to cater to each student’s specific ACT preparation needs.",
-                "One-one-one students who completed tutoring achieved a 5-point increase (on average)"
-            ]
-        },
-        {
-            "title": "Academic Coach",
-            "duration": "January 2020 - December 2021",
-            "notes": [
-                "Managed a team of two assistant coaches and as many as 40 students simultaneously.",
-                "Trained and guided assistant coaches on their individual responsibilities and performance",
-                "Coached a total of 173 students, with over 10% of these students reaching a 34/36 on the ACT (99% percentile score)."
-            ]
-        },
-        {
-            "title": "Assistant Coach",
-            "duration": "August 2019 - December 2019",
-            "notes": [
-                "Mentored a team of 20 students and encouraged an environment for academic success and growth",
-                "Alternated responsibility with another assistant coach on a weekly basis between entering my students’ statistics (test scores, hours, etc.) and monitoring the students’ progress towards memorizing quiz material."
-            ]
-        }
+        "company": "Hack4Impact UTK Chapter",
+        "positions": [
+            {
+                "title": "Technical Lead",
+                "duration": "May 2023 - Present",
+                "notes": [
+                    "Leading an agile team of 5 student developers on a project for United Way of Greater Knoxville (UWGK). This project is a mapping technology that will give UWGK the ability to observe and provide calculated positive impact on the Greater Knoxville community. ",
+                    "Held weekly crash-course meetings on web development concepts, React.js, Express.js, and more to bring the developers up to speed on project-specific technologies.",
+                    "Working alongside a Product Manager to ensure that all development follows project guidelines."
+                ]
+            }
+        ]
+    },
+    {
+        "company": "ACTprep.com, Inc.",
+        "positions": [
+            {
+                "title": "One on One Tutor",
+                "duration": "June 2020 - February 2022",
+                "notes": [
+                    "Coached 18 students in a one-on-one format for a total of 270 hours.",
+                    "Maintained full responsibility over one-on-one students, including progress monitoring, student and parent communication, and student performance data collection and analysis.",
+                    "Developed student-specific program and curriculum structures to cater to each student’s specific ACT preparation needs.",
+                    "One-one-one students who completed tutoring achieved a 5-point increase (on average)"
+                ]
+            },
+            {
+                "title": "Academic Coach",
+                "duration": "January 2020 - December 2021",
+                "notes": [
+                    "Managed a team of two assistant coaches and as many as 40 students simultaneously.",
+                    "Trained and guided assistant coaches on their individual responsibilities and performance",
+                    "Coached a total of 173 students, with over 10% of these students reaching a 34/36 on the ACT (99% percentile score)."
+                ]
+            },
+            {
+                "title": "Assistant Coach",
+                "duration": "August 2019 - December 2019",
+                "notes": [
+                    "Mentored a team of 20 students and encouraged an environment for academic success and growth",
+                    "Alternated responsibility with another assistant coach on a weekly basis between entering my students’ statistics (test scores, hours, etc.) and monitoring the students’ progress towards memorizing quiz material."
+                ]
+            }
 
-      ]
+        ]
     }
   ]

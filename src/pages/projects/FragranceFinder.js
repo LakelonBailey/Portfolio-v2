@@ -59,8 +59,8 @@ const FragranceFinder = ({setPage}) => {
                 <ProjectInfoContainer>
                     <SectionContainer>
                         <BackToProjectsLink onClick={() => setPage('projects')} href="#">&#8592; Back to Projects</BackToProjectsLink>
-                        {/* <h3>Links</h3>
-                        <p>GitHub: <span><a href="https://github.com/LakelonBailey/Memebook" target="_blank" rel="noreferrer">https://github.com/LakelonBailey/Memebook</a></span></p> */}
+                        <h3>Links</h3>
+                        <p>GitHub: <span><a href="https://github.com/LakelonBailey/FragranceFinder" target="_blank" rel="noreferrer">https://github.com/LakelonBailey/FragranceFinder</a></span></p>
                     </SectionContainer>
                     <SectionContainer>
                         <h3>Description</h3>
