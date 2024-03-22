@@ -6,9 +6,10 @@
         "title": "Data Software Engineer Co-op",
         "duration": "August 2023 - Present.",
         "notes": [
+          "Learning and implementing machine learning techniques to train models that accurately predict the computer hardware and software needs of new employees based on historical device usage trends.",
           "Leading the introduction of IBM's Carrot Framework to the Devices Data Insights team, resulting in productivity enhancements and improved codebase structure for data pipelines and reporting.",
-          "Designing and implementing a robust pipeline to rapidly transport 4,000,000+ records from 10+ critical tables from ServiceNow to IBM Cloud Object Storage.",
-          "Migrated SQL-based data reporting processes to the new pipeline, leveraging IBM Cloud Object Storage data."
+          "Designed and implemented a robust pipeline to rapidly transport 4,000,000+ records from 10+ critical tables from ServiceNow to IBM Cloud Object Storage.",
+          "This pipeline is now used at the production level as a foundation for several crucial internal data insights and reporting processes."
         ]
       },
       {
@@ -16,9 +17,9 @@
         "duration": "May 2023 - August 2023.",
         "notes": [
           "Contributed to the strategic re-architecture of a global Vue.js/Spring Boot application that facilitates over 315k users, including all IBM employees.",
-          "Lead a pivotal role in the transformation of the application from a monolithic design to a microservices-based structure.",
           "Refined and implemented modern authentication and authorization mechanisms, significantly improving system security and user experience by ensuring the right access controls for various user roles.",
-          "Organized and optimized data retrieval, leading to a 68% reduction in on-page-load API calls."
+          "Re-organized and optimized data retrieval, leading to a 68% reduction in on-page-load API calls.",
+          "NodeJS Docker Express Django React Vue Unix Digital Ocean AWS S3 MySQL MongoDB PostgreSQL Spring Framework Linux."
         ]
       }
     ]
@@ -28,36 +29,29 @@
     "positions": [
       {
         "title": "Software Engineer",
-        "duration": "March 2023 - Present.",
+        "duration": "May 2022 - Present.",
         "notes": [
-          "Leading the development and maintenance of the ACTprep.com web application: an application designed to receive and process all company data for the purpose of coaching, analytics, student progress monitoring, and more.",
-          "This application serves approximately 100 daily users.",
-          "Improving the scale of the company by increasing the total number of students a coach can mentor by over 100%.",
-          "Consistently decreasing company costs, having reduced annual labor/supplies costs by over $50,000.",
+          "Leading the development and maintenance of the ACTprep.com software infrastructure: a Docker-powered network of web applications and APIs designed to receive and process all company data for coaching, analytics, student progress monitoring, and more.",
+          "Over 150 students, parents, and employees depend on these applications.",
+          "Consistently decreasing company costs through automation, having reduced annual labor/supplies costs by over $50,000 and increased the total number of students an individual coach can mentor by over 100%.",
+          "Designing a Docker-powered microservices app network to improve scalability and accelerate development processes.",
+          "Worked side-by-side with the President of ACTprep.com to fully migrate all ACTprep.com internal processes and data management over to a web application developed from scratch in six months.",
           "Successfully interviewed, hired, and trained a Software Engineering Intern."
-        ]
-      },
-      {
-        "title": "Software Engineer",
-        "duration": "May 2022 - August 2022.",
-        "notes": [
-          "Developed a web application that utilizes the Google Sheets API to store student enrollment data provided by new students as they traverse through the application's enrollment process.",
-          "Streamlined the ACTprep.com enrollment process by relieving the enrollment coordinator of the need to retrieve student enrollment data through text communication.",
-          "Facilitated the enrollment process of over 100 students using this application."
         ]
       }
     ]
   },
   {
-    "company": "Make Me Modern, Inc.",
+    "company": "Hack4Impact UTK Chapter",
     "positions": [
       {
-        "title": "Software Engineer",
-        "duration": "August 2022 - March 2023.",
+        "title": "Technical Lead",
+        "duration": "August 2023 - Present.",
         "notes": [
-          "Managed and developed the ACTprep.com web application project.",
-          "Accelerated the primary data query speed of https://postageapi.com/stats/ page by over 99%.",
-          "Developed a data pipeline to fully migrate a MySQL database to a MongoDB Atlas Cluster while maintaining table relationships for a database containing over 150,000 total records."
+          "Leading a team of five student software developers in the creation of a map-based data visualization software designed to provide insights to United Way of Greater Knoxville (UWGK) on where to direct funding/grants based on community support demographics.",
+          "Holding periodic meetings with UWGK stakeholders to ensure that the project is following their guidelines and expectations.",
+          "Held weekly programming workshops focused on a Next.js stack based on the MERN stack (MongoDB, Express, React, Node).",
+          "These workshops prepared my team to develop software efficiently and professionally for UWGK."
         ]
       }
     ]
