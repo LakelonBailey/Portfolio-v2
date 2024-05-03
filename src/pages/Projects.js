@@ -16,6 +16,7 @@ import MemebookFeed from "../assets/images/projects/memebook/MemebookFeed.png";
 import OriginalPortfolioHomepage from "../assets/images/projects/original-portfolio/OriginalPortfolioHomepage.png";
 import FragranceFinderHome from "../assets/images/projects/fragrance-finder/FragranceFinderHome.png";
 import ParticleSwarmHighCognition from "../assets/images/projects/particle-swarm/particle_swarm_high_cognition.png";
+import UWGMMap from "../assets/images/projects/uwgm/map.png";
 
 const projectsImages = [
   {
@@ -24,6 +25,14 @@ const projectsImages = [
       title: "ACTprep.com Web Application",
       text: "Web application that facilitates most software processes for ACTprep.com's ACT prep program.",
       projectPage: "actprep",
+    },
+  },
+  {
+    src: UWGMMap,
+    description: {
+      title: "United Way Grant Management",
+      text: "Web application that provides robust data visualization and management for employees and volunteers at United Way of Greater Knoxville.",
+      projectPage: "uwgm",
     },
   },
   {

@@ -9,6 +9,7 @@ import Memebook from "../pages/projects/Memebook";
 import OriginalPortfolio from "../pages/projects/OriginalPortfolio";
 import FragranceFinder from "../pages/projects/FragranceFinder";
 import ParticleSwarm from "../pages/projects/ParticleSwarm";
+import UWGM from "../pages/projects/UWGM";
 
 // Data
 const projectPages = {
@@ -35,6 +36,9 @@ const projectPages = {
   },
   "particle-swarm": {
     element: <ParticleSwarm />,
+  },
+  uwgm: {
+    element: <UWGM />,
   },
 };
 
