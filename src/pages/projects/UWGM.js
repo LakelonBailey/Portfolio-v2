@@ -121,6 +121,12 @@ const uwgmImages = [
         This is the Analytics page, which is the core of the application. It
         gives users a variety of insights into how the selected Organizations
         and Projects are performing based on a wide range of metrics.
+        <br />
+        <br />
+        <span style={{ fontStyle: "italic" }}>
+          DISCLAIMER: All data for this page was randomly generated and is not
+          real-world data.
+        </span>
       </ImageDescription>
     ),
   },
