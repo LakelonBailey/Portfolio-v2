@@ -175,7 +175,7 @@ const UWGM = ({ setPage }) => {
                 href="https://utk.hack4impact.org/"
                 style={{ fontWeight: "bold" }}
               >
-                UTK Chapter of Hack4Impact a nationwide
+                UTK Chapter of Hack4Impact
               </a>
               . Hack4Impact is a nationwide non-profit organization focused on
               bringing university students together to engineer powerful
