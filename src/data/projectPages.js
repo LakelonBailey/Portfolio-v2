@@ -10,6 +10,7 @@ import OriginalPortfolio from "../pages/projects/OriginalPortfolio";
 import FragranceFinder from "../pages/projects/FragranceFinder";
 import ParticleSwarm from "../pages/projects/ParticleSwarm";
 import UWGM from "../pages/projects/UWGM";
+import BlenderBeeSwarm from "../pages/projects/BlenderBeeSwarm";
 
 // Data
 const projectPages = {
@@ -39,6 +40,9 @@ const projectPages = {
   },
   uwgm: {
     element: <UWGM />,
+  },
+  "blender-bee-swarm": {
+    element: <BlenderBeeSwarm />,
   },
 };
 

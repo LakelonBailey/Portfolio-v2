@@ -17,6 +17,7 @@ import OriginalPortfolioHomepage from "../assets/images/projects/original-portfo
 import FragranceFinderHome from "../assets/images/projects/fragrance-finder/FragranceFinderHome.png";
 import ParticleSwarmHighCognition from "../assets/images/projects/particle-swarm/particle_swarm_high_cognition.png";
 import UWGMMap from "../assets/images/projects/uwgm/map.png";
+import BlenderBeeSwarmImage from "../assets/images/projects/blender-bee-swarm/BlenderBeeSwarmProjectPhoto.png";
 
 const projectsImages = [
   {
@@ -51,6 +52,15 @@ const projectsImages = [
       text: "Using Particle Swarm Optimization to create shapes!",
       githubLink: "https://github.com/LakelonBailey/ParticleSwarm",
       projectPage: "particle-swarm",
+    },
+  },
+  {
+    src: BlenderBeeSwarmImage,
+    description: {
+      title: "Blender Bee Swarm",
+      text: "Using Particle Swarm Optimization to help bees pollinate flowers!",
+      githubLink: "https://github.com/LakelonBailey/BlenderBeeSwarm",
+      projectPage: "blender-bee-swarm",
     },
   },
   {
