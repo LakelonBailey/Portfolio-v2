@@ -111,7 +111,7 @@ const BlenderBeeSwarm = ({ setPage }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  https://github.com/LakelonBailey/ParticleSwarm
+                  https://github.com/LakelonBailey/BlenderBeeSwarm
                 </a>
               </span>
             </p>

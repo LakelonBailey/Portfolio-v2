@@ -1,18 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 const NetworkAnimation = ({ parentRef }) => {
-    const getNodesCount = () => {
-        if (window.innerWidth < 500) {
-            return 50;
-        }
-        else if (window.innerWidth < 768) {
-            return 75;
-        }
-        return 100;
+  const getNodesCount = () => {
+    if (window.innerWidth < 500) {
+      return 50;
+    } else if (window.innerWidth < 768) {
+      return 75;
     }
+    return 100;
+  };
 
   const canvasRef = useRef(null);
-  const nodes = [];
-  const edges = [];
+  const attributes = {
+    nodes: [],
+    edges: [],
+  };
   const nodesCount = getNodesCount();
 
   // Node creation function
@@ -42,26 +43,26 @@ const NetworkAnimation = ({ parentRef }) => {
     if (node.y < 0 || node.y > height) node.vy = -node.vy;
   };
 
-    // Draw edge function
-    const drawEdge = (ctx, edge) => {
-        const dx = edge.node1.x - edge.node2.x;
-        const dy = edge.node1.y - edge.node2.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
+  // Draw edge function
+  const drawEdge = (ctx, edge) => {
+    const dx = edge.node1.x - edge.node2.x;
+    const dy = edge.node1.y - edge.node2.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
 
-        // Check for maximum distance for displaying edge
-        const maxDist = 75; // Adjust this value as needed
+    // Check for maximum distance for displaying edge
+    const maxDist = 75; // Adjust this value as needed
 
-        if(dist < maxDist){
-        ctx.lineWidth = Math.max(.5, 5 / dist);
+    if (dist < maxDist) {
+      ctx.lineWidth = Math.max(0.5, 5 / dist);
 
-        ctx.beginPath();
-        ctx.moveTo(edge.node1.x, edge.node1.y);
-        ctx.lineTo(edge.node2.x, edge.node2.y);
-        ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(edge.node1.x, edge.node1.y);
+      ctx.lineTo(edge.node2.x, edge.node2.y);
+      ctx.stroke();
 
-        ctx.lineWidth = 1; // Reset line width
-        }
-    };
+      ctx.lineWidth = 1; // Reset line width
+    }
+  };
 
   // Draw node function
   const drawNode = (ctx, node) => {
@@ -74,15 +75,15 @@ const NetworkAnimation = ({ parentRef }) => {
   const draw = (ctx, width, height) => {
     ctx.clearRect(0, 0, width, height);
 
-    for (let node of nodes) {
+    for (let node of attributes.nodes) {
       moveNode(node, width, height);
     }
 
-    for (let edge of edges) {
+    for (let edge of attributes.edges) {
       drawEdge(ctx, edge);
     }
 
-    for (let node of nodes) {
+    for (let node of attributes.nodes) {
       drawNode(ctx, node);
     }
 
@@ -90,24 +91,32 @@ const NetworkAnimation = ({ parentRef }) => {
   };
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    let canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
 
-    const resizeObserver = new ResizeObserver(entries => {
+    const resizeObserver = new ResizeObserver((entries) => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      delete attributes.nodes;
+      delete attributes.edges;
+      attributes.nodes = [];
+      attributes.edges = [];
+
       for (let entry of entries) {
-        const {width, height} = entry.contentRect;
+        const { width, height } = entry.contentRect;
         canvas.width = width;
         canvas.height = height;
 
-        // Create nodes
+        // Create attributes.nodes
         for (let i = 0; i < nodesCount; i++) {
-          nodes.push(createNode(i, width, height));
+          attributes.nodes.push(createNode(i, width, height));
         }
 
-        // Create edges
+        // Create attributes.edges
         for (let i = 0; i < nodesCount; i++) {
           for (let j = i + 1; j < nodesCount; j++) {
-            edges.push(createEdge(nodes[i], nodes[j]));
+            attributes.edges.push(
+              createEdge(attributes.nodes[i], attributes.nodes[j])
+            );
           }
         }
 
@@ -127,14 +136,14 @@ const NetworkAnimation = ({ parentRef }) => {
     <canvas
       ref={canvasRef}
       style={{
-        position: 'absolute',
+        position: "absolute",
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100%',
-        pointerEvents: 'none',
-        opacity: .20,
-        zIndex: -1
+        width: "100%",
+        height: "100%",
+        pointerEvents: "none",
+        opacity: 0.2,
+        zIndex: -1,
       }}
     />
   );

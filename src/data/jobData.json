@@ -3,23 +3,14 @@
     "company": "IBM",
     "positions": [
       {
-        "title": "Data Software Engineer Co-op",
-        "duration": "August 2023 - Present.",
+        "title": "Software Engineer Intern",
+        "duration": "May 2023 - Present",
         "notes": [
-          "Learning and implementing machine learning techniques to train models that accurately predict the computer hardware and software needs of new employees based on historical device usage trends.",
-          "Leading the introduction of IBM's Carrot Framework to the Devices Data Insights team, resulting in productivity enhancements and improved codebase structure for data pipelines and reporting.",
-          "Designed and implemented a robust pipeline to rapidly transport 4,000,000+ records from 10+ critical tables from ServiceNow to IBM Cloud Object Storage.",
-          "This pipeline is now used at the production level as a foundation for several crucial internal data insights and reporting processes."
-        ]
-      },
-      {
-        "title": "Full-Stack Software Engineer Intern",
-        "duration": "May 2023 - August 2023.",
-        "notes": [
-          "Contributed to the strategic re-architecture of a global Vue.js/Spring Boot application that facilitates over 315k users, including all IBM employees.",
-          "Refined and implemented modern authentication and authorization mechanisms, significantly improving system security and user experience by ensuring the right access controls for various user roles.",
-          "Re-organized and optimized data retrieval, leading to a 68% reduction in on-page-load API calls.",
-          "NodeJS Docker Express Django React Vue Unix Digital Ocean AWS S3 MySQL MongoDB PostgreSQL Spring Framework Linux."
+          "Developing end-to-end software for Devices@IBM, including a full-stack application that supports employee device-related operations, data pipelines to support the web application, and exploratory data analysis to inform device provisioning decisions.",
+          "Developed a Python service that supports all data pipelines and reporting related to employee device tier assignment, leveraging data from IBM DB2, PostgreSQL, and ServiceNow.",
+          "Migrated 100% of all regular Devices@IBM data pipelines to the same Python data science framework, leading to significant improvements in code maintainability and professionalism.",
+          "Increased the data transfer speed of a crucial data pipeline by 12mb/s (300%) by developing a multi-threaded REST API batch processing solution in Python, successfully replacing a sunsetting technology.",
+          "Re-architected a Vue.js client application and implemented a modern SSO system, leading to a 68% reduction in on-page-load API calls, a 50% reduction in build size, and a 99% reduction in login-related support tickets, impacting over 315,000 users."
         ]
       }
     ]
@@ -29,29 +20,12 @@
     "positions": [
       {
         "title": "Software Engineer",
-        "duration": "May 2022 - Present.",
+        "duration": "May 2022 - Present",
         "notes": [
-          "Leading the development and maintenance of the ACTprep.com software infrastructure: a Docker-powered network of web applications and APIs designed to receive and process all company data for coaching, analytics, student progress monitoring, and more.",
-          "Over 150 students, parents, and employees depend on these applications.",
-          "Consistently decreasing company costs through automation, having reduced annual labor/supplies costs by over $50,000 and increased the total number of students an individual coach can mentor by over 100%.",
-          "Designing a Docker-powered microservices app network to improve scalability and accelerate development processes.",
-          "Worked side-by-side with the President of ACTprep.com to fully migrate all ACTprep.com internal processes and data management over to a web application developed from scratch in six months.",
-          "Successfully interviewed, hired, and trained a Software Engineering Intern."
-        ]
-      }
-    ]
-  },
-  {
-    "company": "Hack4Impact UTK Chapter",
-    "positions": [
-      {
-        "title": "Technical Lead",
-        "duration": "August 2023 - Present.",
-        "notes": [
-          "Leading a team of five student software developers in the creation of a map-based data visualization software designed to provide insights to United Way of Greater Knoxville (UWGK) on where to direct funding/grants based on community support demographics.",
-          "Holding periodic meetings with UWGK stakeholders to ensure that the project is following their guidelines and expectations.",
-          "Held weekly programming workshops focused on a Next.js stack based on the MERN stack (MongoDB, Express, React, Node).",
-          "These workshops prepared my team to develop software efficiently and professionally for UWGK."
+          "Founded and currently leading the software engineering team at ACTprep.com, including continuous design, development, and maintenance of features to support over 130 daily active users and over 1,000 users all-time.",
+          "Developed over 95% of all company software, focusing on automation and powerful data analytics, leading to a $50,000 reduction in labor and supply costs, a 67% increase in student-per-coach capacity, and enabling the company to scale to 6 additional states.",
+          "Designed entire company software infrastructure, including a Django/PosgreSQL backend API, a Docker network of React apps served by nginx, and an AWS S3 instance to facilitate backups and media file storage.",
+          "Developed numerous features that have revolutionized company processes, including a student monitoring dashboard for parents, multiple analytics dashboards for coaches, a fully-automated enrollment process, a student program builder, a mock ACT testing solution, and a comprehensive student app featuring performance metrics, text reminders, a daily schedule, fully-digitized curriculum, a digital answer sheet, and a practice test analysis tool."
         ]
       }
     ]

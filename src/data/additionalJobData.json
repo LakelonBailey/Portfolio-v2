@@ -1,5 +1,20 @@
 [
   {
+    "company": "Hack4Impact UTK",
+    "positions": [
+      {
+        "title": "Technical Lead",
+        "duration": "August 2023 - May 2024.",
+        "notes": [
+          "Led a team of five student software developers in the creation of a map-based data visualization software designed to provide insights to United Way of Greater Knoxville (UWGK) on where to direct funding/grants based on community support demographics.",
+          "Held periodic meetings with UWGK stakeholders to ensure that the project is following their guidelines and expectations.",
+          "Held weekly programming workshops focused on a Next.js stack based on the MERN stack (MongoDB, Express, React, Node).",
+          "These workshops prepared my team to develop software efficiently and professionally for UWGK."
+        ]
+      }
+    ]
+  },
+  {
     "company": "ACTprep.com, Inc.",
     "positions": [
       {

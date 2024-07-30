@@ -1,6 +1,7 @@
 import PyPDF2
 import json
 import re
+import sys
 
 title_first_words = [
     "Software",
@@ -24,7 +25,8 @@ with open("src/assets/files/lakelon_bailey_resume.pdf", "rb") as fl:
         .replace("\n", " ")
         .replace("\u2019", "'")
     )
-
+    print(text)
+    sys.exit()
     sections = text.split("•")
     sentences = [
         f"{sentence.strip()}."

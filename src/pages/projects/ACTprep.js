@@ -22,8 +22,20 @@ import studentTestAnalysisImage from "../../assets/images/projects/actprep/Stude
 import parentDashboardImage from "../../assets/images/projects/actprep/ParentDashboard.png";
 import testTakingAppImage from "../../assets/images/projects/actprep/TestTakingApp.png";
 import enrollmentAppImage from "../../assets/images/projects/actprep/EnrollmentApp.png";
+import curriculumBuilderImage from "../../assets/images/projects/actprep/CurriculumBuilder.png";
 
 const actprepImages = [
+  {
+    src: curriculumBuilderImage,
+    description: (
+      <ImageDescription>
+        This is the new Curriculum Builder, which is part of the revamped
+        React/Material UI admin application. This page allows employees to build
+        comprehensive programs for students with daily instructions on how to
+        progress through their ACT prep material.
+      </ImageDescription>
+    ),
+  },
   {
     src: accountabilitySheetImage,
     description: (
@@ -230,10 +242,13 @@ const ACTPrep = ({ setPage }) => {
           <SectionContainer>
             <h3>My Contribution</h3>
             <p>
-              Apart from a significant portion of the dashboard styling which
-              was provided by my former coworkers at Make Me Modern, Inc., I am
-              responsible for the entirety of this application's front-end and
-              back-end code.
+              I have build over 95% of all software for ACTprep.com. Currently,
+              the primary contributors on this project are myself and
+              ACTprep.com's software development intern,{" "}
+              <a href="https://www.linkedin.com/in/trenton-wakham-718008277/">
+                Trent Wakham
+              </a>
+              .
             </p>
           </SectionContainer>
 
@@ -254,13 +269,12 @@ const ACTPrep = ({ setPage }) => {
           <SectionContainer>
             <h3>What I Learned</h3>
             <p>
-              Having worked on it for well over a year, this project is
-              responsible for the majority of my understanding of full-stack
-              development. It has aided in sigificantly increasing my
-              understanding of all coding languages used. Along with this, it
-              has taught me the value of following best practices, maintaining a
-              logical relational database structure, refined user interfaces,
-              efficient database queries, and more.
+              This project has laid the groundwork for my sofware engineering
+              career. It has exposed me to a tremendous number of real-world
+              software engineering principles while giving me the opportunity to
+              boost my skills and positively impact others through software
+              development on a daily basis. This project and its effects on
+              ACTprep.com are my proudest accomplishment.
             </p>
           </SectionContainer>
           <SectionContainer>

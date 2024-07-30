@@ -1,26 +1,26 @@
-import React from "react"
+import React from "react";
 import styled from "styled-components";
+
+const hoveredAttributes = `
+    z-index: 800;
+
+    & div {
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    & img {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+`;
 
 const MasonryImageWrapper = styled.div`
   width: 100%;
   max-width: 70vw;
   margin: 0 auto;
   display: block;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   position: relative;
-
-  &:hover {
-    z-index: 800;
-
-    & div {
-      opacity: 1;
-      background-color: rgba(255, 255, 255, .75);
-    }
-
-    & img {
-      box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-    }
-  }
 
   & div {
     position: absolute;
@@ -33,7 +33,7 @@ const MasonryImageWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color .5s ease, opacity .5s ease;
+    transition: background-color 0.5s ease, opacity 0.5s ease;
     border-radius: 15px;
     cursor: pointer;
 
@@ -47,23 +47,34 @@ const MasonryImageWrapper = styled.div`
     height: 100%;
     width: 100%;
     border-radius: 15px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border: 1px solid lightgray;
   }
-`;
+  &:hover {
+    ${hoveredAttributes}
+  }
 
-const MasonryImage = ({image, handleImageClick, customHover}) => {
-    return (
-      <MasonryImageWrapper>
-        <div onClick={handleImageClick}>
-          <p>{customHover ? customHover : 'View More'}</p>
-        </div>
-        <img
-          src={image.src}
-          alt=""
-        />
-      </MasonryImageWrapper>
-    )
-}
+  @media (max-width: 500px) {
+    ${hoveredAttributes}
+  }
+`;
+const MasonryImage = ({
+  image,
+  handleImageClick,
+  customHover,
+  alwaysShowTitle,
+}) => {
+  return (
+    <MasonryImageWrapper
+      alwaysShowTitle={alwaysShowTitle}
+      onClick={handleImageClick}
+    >
+      <div>
+        <p>{customHover ? customHover : "View More"}</p>
+      </div>
+      <img src={image.src} alt="" />
+    </MasonryImageWrapper>
+  );
+};
 
 export default MasonryImage;
