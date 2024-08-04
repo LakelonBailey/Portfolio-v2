@@ -242,7 +242,7 @@ const ACTPrep = ({ setPage }) => {
           <SectionContainer>
             <h3>My Contribution</h3>
             <p>
-              I have build over 95% of all software for ACTprep.com. Currently,
+              I have built over 95% of all software for ACTprep.com. Currently,
               the primary contributors on this project are myself and
               ACTprep.com's software development intern,{" "}
               <a href="https://www.linkedin.com/in/trenton-wakham-718008277/">
