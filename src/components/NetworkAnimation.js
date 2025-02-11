@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 const NetworkAnimation = ({ parentRef }) => {
   const getNodesCount = () => {
     if (window.innerWidth < 500) {
@@ -10,11 +10,6 @@ const NetworkAnimation = ({ parentRef }) => {
   };
 
   const canvasRef = useRef(null);
-  const attributes = {
-    nodes: [],
-    edges: [],
-  };
-  const nodesCount = getNodesCount();
 
   // Node creation function
   const createNode = (id, width, height) => {
@@ -36,8 +31,9 @@ const NetworkAnimation = ({ parentRef }) => {
 
   // Node movement function
   const moveNode = (node, width, height) => {
-    node.x += node.vx;
-    node.y += node.vy;
+    const movementFactor = 2;
+    node.x += node.vx * movementFactor;
+    node.y += node.vy * movementFactor;
 
     if (node.x < 0 || node.x > width) node.vx = -node.vx;
     if (node.y < 0 || node.y > height) node.vy = -node.vy;
@@ -50,10 +46,10 @@ const NetworkAnimation = ({ parentRef }) => {
     const dist = Math.sqrt(dx * dx + dy * dy);
 
     // Check for maximum distance for displaying edge
-    const maxDist = 75; // Adjust this value as needed
+    const maxDist = 125; // Adjust this value as needed
 
     if (dist < maxDist) {
-      ctx.lineWidth = Math.max(0.5, 5 / dist);
+      ctx.lineWidth = Math.max(1, 10 / dist);
 
       ctx.beginPath();
       ctx.moveTo(edge.node1.x, edge.node1.y);
@@ -67,14 +63,16 @@ const NetworkAnimation = ({ parentRef }) => {
   // Draw node function
   const drawNode = (ctx, node) => {
     ctx.beginPath();
-    ctx.arc(node.x, node.y, 2, 0, 2 * Math.PI);
+    ctx.arc(node.x, node.y, 5, 0, 2 * Math.PI);
     ctx.fill();
   };
 
   // Drawing loop function
-  const draw = (ctx, width, height) => {
+  const draw = useCallback((attributes, ctx, width, height) => {
+    if (!("nodes" in attributes)) {
+      return;
+    }
     ctx.clearRect(0, 0, width, height);
-
     for (let node of attributes.nodes) {
       moveNode(node, width, height);
     }
@@ -87,14 +85,19 @@ const NetworkAnimation = ({ parentRef }) => {
       drawNode(ctx, node);
     }
 
-    requestAnimationFrame(() => draw(ctx, width, height));
-  };
+    requestAnimationFrame(() => draw(attributes, ctx, width, height));
+  }, []);
 
   useEffect(() => {
     let canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-
+    const attributes = {
+      nodes: [],
+      edges: [],
+    };
+    const nodesCount = getNodesCount();
     const resizeObserver = new ResizeObserver((entries) => {
+      ctx.reset();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       delete attributes.nodes;
       delete attributes.edges;
@@ -120,7 +123,7 @@ const NetworkAnimation = ({ parentRef }) => {
           }
         }
 
-        draw(ctx, width, height);
+        draw(attributes, ctx, width, height);
       }
     });
 
@@ -130,7 +133,7 @@ const NetworkAnimation = ({ parentRef }) => {
     return () => {
       resizeObserver.disconnect();
     };
-  }, [parentRef]);
+  }, [parentRef, draw]);
 
   return (
     <canvas

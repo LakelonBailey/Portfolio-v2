@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import NetworkAnimation from "./NetworkAnimation";
 
-const LANDING_ACTIVATED = false;
+const LANDING_ACTIVATED = true;
 
 const slideOut = (direction) => keyframes`
     0% {
