@@ -66,7 +66,7 @@ const particleSwarmImages = [
   },
 ];
 
-const BlenderBeeSwarm = ({ setPage }) => {
+const BlenderBeeSwarm = ({ setPage, renderImages }) => {
   const [modalState, setModalState] = useState({
     image: null,
     active: false,
@@ -153,14 +153,16 @@ const BlenderBeeSwarm = ({ setPage }) => {
           </SectionContainer>
           <SectionContainer>
             <h3>Final Rendered Animation</h3>
-            <VideoWrapper>
-              <video
-                controls
-                autoPlay
-                src={BlenderBeeSwarmVideo}
-                type="video/mp4"
-              />
-            </VideoWrapper>
+            {renderImages && (
+              <VideoWrapper>
+                <video
+                  controls
+                  autoPlay
+                  src={BlenderBeeSwarmVideo}
+                  type="video/mp4"
+                />
+              </VideoWrapper>
+            )}
           </SectionContainer>
 
           <SectionContainer>
@@ -187,7 +189,7 @@ const BlenderBeeSwarm = ({ setPage }) => {
           </SectionContainer>
           <SectionContainer>
             <h3>Animation Models</h3>
-            <PhotoMasonry images={images} />
+            <PhotoMasonry images={images} renderImages={renderImages} />
           </SectionContainer>
         </ProjectInfoContainer>
       </Section>

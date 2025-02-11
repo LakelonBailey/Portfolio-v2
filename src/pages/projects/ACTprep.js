@@ -18,13 +18,70 @@ import {
 import accountabilitySheetImage from "../../assets/images/projects/actprep/AccountabilitySheet.png";
 import masterSheetImage from "../../assets/images/projects/actprep/MasterSheet.png";
 import studentDashboardImage from "../../assets/images/projects/actprep/StudentDashboard.png";
-import studentTestAnalysisImage from "../../assets/images/projects/actprep/StudentTestAnalysis.png";
+import digitalAnswerSheet from "../../assets/images/projects/actprep/DigitalAnswerSheet.png";
 import parentDashboardImage from "../../assets/images/projects/actprep/ParentDashboard.png";
-import testTakingAppImage from "../../assets/images/projects/actprep/TestTakingApp.png";
 import enrollmentAppImage from "../../assets/images/projects/actprep/EnrollmentApp.png";
 import curriculumBuilderImage from "../../assets/images/projects/actprep/CurriculumBuilder.png";
+import testAnalyis from "../../assets/images/projects/actprep/TestAnalysis.png";
+import aIGeneratedQuestion from "../../assets/images/projects/actprep/AIGeneratedQuestion.png";
+import testingAppDashboard from "../../assets/images/projects/actprep/TestingAppDashboard.png";
+import aIChatBox from "../../assets/images/projects/actprep/AIChatBox.png";
 
 const actprepImages = [
+  {
+    src: testingAppDashboard,
+    description: (
+      <ImageDescription>
+        This is the brand-new testing dashboard, where students are able to
+        start taking tests as well as view analysis on their previously taken
+        tests.
+      </ImageDescription>
+    ),
+  },
+  {
+    src: digitalAnswerSheet,
+    description: (
+      <ImageDescription>
+        This is the brand-new digital answer sheet. Students use this feature to
+        easily complete tests. This feature allows us to track metrics such as
+        time per question, flagged questions, unanswered questions, etc. Along
+        with this, this digital answer sheet instantly grades the test upon
+        completion, which significantly reduces manual work for the students
+        students.
+      </ImageDescription>
+    ),
+  },
+  {
+    src: testAnalyis,
+    description: (
+      <ImageDescription>
+        This is the brand-new test analysis, where students are able to view an
+        in-depth analysis of their completed tests.
+      </ImageDescription>
+    ),
+  },
+  {
+    src: aIGeneratedQuestion,
+    description: (
+      <ImageDescription>
+        This is the brand-new AI question generator. This feature allows
+        students to generate math questions similar to the ones they missed,
+        allowing them to hone their skills on specific concepts or question
+        types.
+      </ImageDescription>
+    ),
+  },
+  {
+    src: aIChatBox,
+    description: (
+      <ImageDescription>
+        This is the new brand-new AI assistant feature. This feature allows
+        students to ask clarifying questions regarding the AI generated
+        questions. Through prompt engineering, we prevent students from
+        discussing anything unrelated to the ACT with the assistant.
+      </ImageDescription>
+    ),
+  },
   {
     src: curriculumBuilderImage,
     description: (
@@ -67,18 +124,6 @@ const actprepImages = [
     ),
   },
   {
-    src: studentTestAnalysisImage,
-    description: (
-      <ImageDescription>
-        This page provides students with an in-depth analysis of many different
-        statistics for each test they take using the in-app answer sheet. For
-        each question, they are shown their result for that question, their
-        performance on compared to other students, the time spent on that
-        question, and more.
-      </ImageDescription>
-    ),
-  },
-  {
     src: parentDashboardImage,
     description: (
       <ImageDescription>
@@ -86,18 +131,6 @@ const actprepImages = [
         representation of the effort their child is putting into the program
         compared to other students as well as a reflection of their student's
         performance.
-      </ImageDescription>
-    ),
-  },
-  {
-    src: testTakingAppImage,
-    description: (
-      <ImageDescription>
-        This is the test taking app. It is our custom answer sheet that
-        resembles a standardized testing bubble sheet. By using this app to take
-        tests, students are provided with far more information on their
-        performance, allowing students to further learn from each test they
-        take.
       </ImageDescription>
     ),
   },
@@ -113,7 +146,7 @@ const actprepImages = [
   },
 ];
 
-const ACTPrep = ({ setPage }) => {
+const ACTPrep = ({ setPage, renderImages }) => {
   const [modalState, setModalState] = useState({
     image: null,
     active: false,
@@ -242,9 +275,9 @@ const ACTPrep = ({ setPage }) => {
           <SectionContainer>
             <h3>My Contribution</h3>
             <p>
-              I have built over 95% of all software for ACTprep.com. Currently,
-              the primary contributors on this project are myself and
-              ACTprep.com's software development intern,{" "}
+              I have built over 95% of all software for ACTprep.com. The primary
+              contributors on this project are myself and ACTprep.com's former
+              software development intern,{" "}
               <a href="https://www.linkedin.com/in/trenton-wakham-718008277/">
                 Trent Wakham
               </a>
@@ -255,11 +288,12 @@ const ACTPrep = ({ setPage }) => {
           <SectionContainer>
             <h3>Technologies Used</h3>
             <p>
-              <strong>Front-end:</strong> HTML, CSS, JavaScript (JQuery), Bulma
-              CSS Framework
+              <strong>Front-end:</strong> React, MUI, HTML, CSS, JavaScript
+              (JQuery), Bulma CSS Framework
             </p>
             <p>
-              <strong>Back-end:</strong> Python (Django), PostgreSQL
+              <strong>Back-end:</strong> Python (Django), PostgreSQL, AWS S3
+              (Media storage)
             </p>
             <p>
               <strong>Hosting:</strong> Digital Ocean
@@ -279,7 +313,7 @@ const ACTPrep = ({ setPage }) => {
           </SectionContainer>
           <SectionContainer>
             <h3>My Favorite Features</h3>
-            <PhotoMasonry images={images} />
+            <PhotoMasonry images={images} renderImages={renderImages} />
           </SectionContainer>
         </ProjectInfoContainer>
       </Section>

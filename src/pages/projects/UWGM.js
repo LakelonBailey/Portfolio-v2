@@ -132,7 +132,7 @@ const uwgmImages = [
   },
 ];
 
-const UWGM = ({ setPage }) => {
+const UWGM = ({ setPage, renderImages }) => {
   const [modalState, setModalState] = useState({
     image: null,
     active: false,
@@ -313,7 +313,7 @@ const UWGM = ({ setPage }) => {
           </SectionContainer>
           <SectionContainer>
             <h3>Photos</h3>
-            <PhotoMasonry images={images} />
+            <PhotoMasonry images={images} renderImages={renderImages} />
           </SectionContainer>
         </ProjectInfoContainer>
       </Section>

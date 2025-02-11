@@ -209,7 +209,7 @@ const ProjectDescription = ({
   );
 };
 
-const Projects = ({ setPage }) => {
+const Projects = ({ setPage, renderImages }) => {
   const [modalState, setModalState] = useState({
     image: null,
     active: false,
@@ -241,7 +241,7 @@ const Projects = ({ setPage }) => {
     <PageBox>
       <Section>
         <SectionHeader>Projects</SectionHeader>
-        <PhotoMasonry images={images} />
+        <PhotoMasonry images={images} renderImages={renderImages} />
       </Section>
       <Footer />
       <ImageModal

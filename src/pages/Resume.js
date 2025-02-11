@@ -10,13 +10,7 @@ import BootcampCertificate from "../assets/files/lakelon_bailey_bootcamp_certifi
 import jobData from "../data/jobData.json";
 import additionalJobData from "../data/additionalJobData.json";
 
-import {
-  FaCode,
-  FaUncharted,
-  FaCheck,
-  FaBolt,
-  FaLightbulb,
-} from "react-icons/fa";
+import { FaCode, FaUncharted, FaCheck, FaBolt } from "react-icons/fa";
 import Footer from "../components/Footer";
 
 const SkillSectionHeader = styled.h2`
@@ -316,24 +310,23 @@ const Resume = () => {
             <SectionList>
               <SoftwareList>
                 <p>Front-end</p>
-                <p>React, Vue, Axios, Websockets, SPAs</p>
+                <p>React, Vue, Axios, WebSockets, SPAs</p>
               </SoftwareList>
               <SoftwareList>
                 <p>Back-end</p>
-                <p>Django, Nginx, Docker, Springboot, Express.js</p>
+                <p>
+                  Django, FastAPI, Flask, Nginx, Docker, Spring Boot, Express.js
+                </p>
               </SoftwareList>
               <SoftwareList>
                 <p>Data</p>
-                <p>
-                  GraphQL, MongoDB, MySQL, PostgreSQL, SQLite, Pandas, Numpy
-                </p>
+                <p>PostgreSQL, MongoDB, MySQL, SQLite, Pandas, Numpy</p>
               </SoftwareList>
               <SoftwareList>
                 <p>Cloud</p>
                 <p>
-                  IBM Cloud Services (Data Engine, CloudPak for Data,
-                  Watsonx.data), AWS (EC2, S3), Google Cloud, Digital Ocean,
-                  Heroku, Firebase
+                  AWS (S3, EC2), IBM Cloud (Object Storage, CloudPak for Data,
+                  Watsonx), Digital Ocean
                 </p>
               </SoftwareList>
             </SectionList>
@@ -350,78 +343,44 @@ const Resume = () => {
                   <span>
                     <FaBolt size={"20px"} />
                   </span>
-                  <span>Techniques</span>
+                  <span>Technical Expertise</span>
                 </SkillSectionHeader>
                 <SectionList>
                   <TechniqueListItem>
                     <span>
                       <FaCheck color="var(--theme-1)" />
                     </span>
-                    <span>Object-oriented Programming</span>
+                    <span>REST API Development</span>
                   </TechniqueListItem>
                   <TechniqueListItem>
                     <span>
                       <FaCheck color="var(--theme-1)" />
                     </span>
-                    <span>Test-driven Development</span>
+                    <span>Microservices Architecture</span>
                   </TechniqueListItem>
                   <TechniqueListItem>
                     <span>
                       <FaCheck color="var(--theme-1)" />
                     </span>
-                    <span>Agile Development</span>
+                    <span>OAuth2 & SSO Authentication</span>
                   </TechniqueListItem>
                   <TechniqueListItem>
                     <span>
                       <FaCheck color="var(--theme-1)" />
                     </span>
-                    <span>Full-stack Development</span>
-                  </TechniqueListItem>
-                </SectionList>
-              </SubSection>
-              <SubSection>
-                <SkillSectionHeader>
-                  <span>
-                    <FaLightbulb size={"20px"} />
-                  </span>
-                  <span>Soft Skills</span>
-                </SkillSectionHeader>
-                <SectionList>
-                  <TechniqueListItem>
-                    <span>
-                      <FaCheck color="var(--theme-1)" />
-                    </span>
-                    <span>Problem-solving</span>
+                    <span>WebSockets & Real-time Communication</span>
                   </TechniqueListItem>
                   <TechniqueListItem>
                     <span>
                       <FaCheck color="var(--theme-1)" />
                     </span>
-                    <span>Versatility/Adaptibility</span>
+                    <span>Data Pipelines & ETL Processing</span>
                   </TechniqueListItem>
                   <TechniqueListItem>
                     <span>
                       <FaCheck color="var(--theme-1)" />
                     </span>
-                    <span>Self-teaching/Self-starting</span>
-                  </TechniqueListItem>
-                  <TechniqueListItem>
-                    <span>
-                      <FaCheck color="var(--theme-1)" />
-                    </span>
-                    <span>Leadership and Communication</span>
-                  </TechniqueListItem>
-                  <TechniqueListItem>
-                    <span>
-                      <FaCheck color="var(--theme-1)" />
-                    </span>
-                    <span>Project management</span>
-                  </TechniqueListItem>
-                  <TechniqueListItem>
-                    <span>
-                      <FaCheck color="var(--theme-1)" />
-                    </span>
-                    <span>Teaching/Coaching</span>
+                    <span>Reverse Proxy & CDN Optimization</span>
                   </TechniqueListItem>
                 </SectionList>
               </SubSection>

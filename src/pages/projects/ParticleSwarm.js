@@ -72,7 +72,7 @@ const particleSwarmImages = [
   },
 ];
 
-const ParticleSwarm = ({ setPage }) => {
+const ParticleSwarm = ({ setPage, renderImages }) => {
   const [modalState, setModalState] = useState({
     image: null,
     active: false,
@@ -178,14 +178,16 @@ const ParticleSwarm = ({ setPage }) => {
           </SectionContainer>
           <SectionContainer>
             <h3>Presentation Mode Video Example</h3>
-            <VideoWrapper>
-              <video
-                controls
-                autoPlay
-                src={ParticleSwarmVideo}
-                type="video/mp4"
-              />
-            </VideoWrapper>
+            {renderImages && (
+              <VideoWrapper>
+                <video
+                  controls
+                  autoPlay
+                  src={ParticleSwarmVideo}
+                  type="video/mp4"
+                />
+              </VideoWrapper>
+            )}
           </SectionContainer>
 
           <SectionContainer>
@@ -220,7 +222,7 @@ const ParticleSwarm = ({ setPage }) => {
           </SectionContainer>
           <SectionContainer>
             <h3>Photos</h3>
-            <PhotoMasonry images={images} />
+            <PhotoMasonry images={images} renderImages={renderImages} />
           </SectionContainer>
         </ProjectInfoContainer>
       </Section>

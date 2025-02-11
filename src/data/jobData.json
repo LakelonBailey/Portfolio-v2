@@ -6,11 +6,10 @@
         "title": "Software Engineer Intern",
         "duration": "May 2023 - Present",
         "notes": [
-          "Developing end-to-end software for Devices@IBM, including a full-stack application that supports employee device-related operations, data pipelines to support the web application, and exploratory data analysis to inform device provisioning decisions.",
-          "Developed a Python service that supports all data pipelines and reporting related to employee device tier assignment, leveraging data from IBM DB2, PostgreSQL, and ServiceNow.",
-          "Migrated all regular Devices@IBM data pipelines to the same Python data science framework, leading to significant improvements in code maintainability and professionalism.",
+          "Developed a REST API using FastAPI that serves employee device performance and health score data, improving accuracy of reactive IT support for over 300,000 devices.",
+          "Integrated device performance data into employee device provisioning logic, allowing 110,000+ employees to receive a device catered towards their specific computation needs.",
           "Increased the data transfer speed of a crucial data pipeline by 12mb/s (300%) by developing a multi-threaded REST API batch processing solution in Python, successfully replacing a sunsetting technology.",
-          "Re-architected a Vue.js client application and implemented a modern SSO system, leading to a 68% reduction in on-page-load API calls, a 50% reduction in build size, and a 99% reduction in login-related support tickets, impacting over 315,000 users."
+          "Re-architected a Vue.js client application and implemented a modern SSO system, leading to a 68% reduction in on-page-load API calls and a 99% reduction in login-related support tickets, impacting over 300,000 users."
         ]
       }
     ]
@@ -22,10 +21,12 @@
         "title": "Software Engineer",
         "duration": "May 2022 - Present",
         "notes": [
-          "Founded and currently leading the software engineering team at ACTprep.com, including continuous design, development, and maintenance of features to support over 130 daily active users and over 1,000 users all-time.",
-          "Developed over 95% of all company software, focusing on automation and powerful data analytics, leading to a $50,000 reduction in labor and supply costs, a 67% increase in student-per-coach capacity, and enabling the company to scale to 6 additional states.",
-          "Designed entire company software infrastructure, including a Django/PosgreSQL backend API, a Docker network of React apps served by nginx, and an AWS S3 instance to facilitate backups and media file storage.",
-          "Developed numerous features that have revolutionized company processes, including a student monitoring dashboard for parents, multiple analytics dashboards for coaches, a fully-automated enrollment process, a student program builder, a mock ACT testing solution, and a comprehensive student app featuring performance metrics, text reminders, a daily schedule, fully-digitized curriculum, a digital answer sheet, and a practice test analysis tool."
+          "ACTprep.com is a Knoxville-based ACT tutoring company with a focus on developing students’ study skills and preparing them for college.",
+          "Founded and currently leading the technical team, including continuous design, development, and maintenance of features to support over 130 daily active users and over 2,000 users all-time.",
+          "Built web applications that automated and digitized every aspect of the company, cutting costs by $50,000, doubling student capacity per coach, and preparing the company to scale nationwide.",
+          "Built a mock ACT digital testing app, with more than 18,000 tests administered.",
+          "Built a student dashboard that has now logged 50,000+ hours of student use with fully automated guidance through the program.",
+          "Enabled the creation of over 100 4+ star rated test questions through a feature that allows students to generate new test questions through OpenAI’s gpt-4o REST API."
         ]
       }
     ]
